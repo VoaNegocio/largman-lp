@@ -138,6 +138,7 @@ export default function AmbientsCarousel() {
                                             className="w-full h-full object-cover rounded-3xl"
                                             controls
                                             playsInline
+                                            muted
                                             controlsList="nodownload"
                                         >
                                             <source src={section4Video} type="video/mp4" />
