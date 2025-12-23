@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
   return (
-    <div className="font-sans text-neutral-900 antialiased selection:bg-[#1B4B7B] selection:text-white">
+    <div className="font-sans text-neutral-900 antialiased selection:bg-[#C8A951] selection:text-white">
       <Hero />
       <Differentials />
       <Testimonials />

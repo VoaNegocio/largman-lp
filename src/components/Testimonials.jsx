@@ -78,13 +78,13 @@ export default function Testimonials() {
     return (
         <section className="py-24 md:py-32 px-4 bg-gradient-to-b from-white via-neutral-50/50 to-white relative overflow-hidden">
             <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute -top-32 -left-32 w-[900px] h-[400px] bg-gradient-to-r from-[#1B4B7B]/25 via-[#2a6ba8]/20 to-transparent rounded-full blur-[100px] rotate-12"></div>
-                <div className="absolute top-1/4 -right-40 w-[350px] h-[800px] bg-gradient-to-l from-[#2a6ba8]/22 via-[#1B4B7B]/18 to-transparent rounded-full blur-[120px] -rotate-6"></div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-to-br from-[#1B4B7B]/15 via-[#2a6ba8]/10 via-[#153a5f]/8 to-transparent rounded-full blur-[150px]"></div>
-                <div className="absolute -bottom-40 left-1/3 w-[800px] h-[350px] bg-gradient-to-t from-[#153a5f]/20 via-[#1B4B7B]/15 to-transparent rounded-full blur-[110px] -rotate-12"></div>
-                <div className="absolute top-0 left-0 w-[300px] h-[600px] bg-gradient-to-r from-[#1B4B7B]/18 via-[#2a6ba8]/12 to-transparent rounded-full blur-[100px]"></div>
-                <div className="absolute top-20 right-1/4 w-[400px] h-[400px] bg-gradient-to-bl from-[#2a6ba8]/16 via-[#1B4B7B]/10 to-transparent rounded-full blur-[90px]"></div>
-                <div className="absolute bottom-1/3 right-1/4 w-[600px] h-[200px] bg-gradient-to-r from-[#1B4B7B]/14 via-[#2a6ba8]/10 to-transparent rounded-full blur-[100px] rotate-45"></div>
+                <div className="absolute -top-32 -left-32 w-[900px] h-[400px] bg-gradient-to-r from-[#C8A951]/25 via-[#E0C370]/20 to-transparent rounded-full blur-[100px] rotate-12"></div>
+                <div className="absolute top-1/4 -right-40 w-[350px] h-[800px] bg-gradient-to-l from-[#E0C370]/22 via-[#C8A951]/18 to-transparent rounded-full blur-[120px] -rotate-6"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-to-br from-[#C8A951]/15 via-[#E0C370]/10 via-[#8C7335]/8 to-transparent rounded-full blur-[150px]"></div>
+                <div className="absolute -bottom-40 left-1/3 w-[800px] h-[350px] bg-gradient-to-t from-[#8C7335]/20 via-[#C8A951]/15 to-transparent rounded-full blur-[110px] -rotate-12"></div>
+                <div className="absolute top-0 left-0 w-[300px] h-[600px] bg-gradient-to-r from-[#C8A951]/18 via-[#E0C370]/12 to-transparent rounded-full blur-[100px]"></div>
+                <div className="absolute top-20 right-1/4 w-[400px] h-[400px] bg-gradient-to-bl from-[#E0C370]/16 via-[#C8A951]/10 to-transparent rounded-full blur-[90px]"></div>
+                <div className="absolute bottom-1/3 right-1/4 w-[600px] h-[200px] bg-gradient-to-r from-[#C8A951]/14 via-[#E0C370]/10 to-transparent rounded-full blur-[100px] rotate-45"></div>
 
                 <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent via-transparent to-white/40"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-transparent"></div>
@@ -97,27 +97,27 @@ export default function Testimonials() {
                             Clientes satisfeitos são nossa
                         </span>
                         <br />
-                        <span className="text-[#1B4B7B]">maior prova de qualidade.</span>
+                        <span className="text-[#C8A951]">maior prova de qualidade.</span>
                     </h2>
 
                     <div className="flex items-center justify-center gap-4 mb-8">
-                        <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#1B4B7B]/30"></div>
-                        <div className="w-2 h-2 rounded-full bg-[#1B4B7B]"></div>
-                        <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#1B4B7B]/30"></div>
+                        <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#C8A951]/30"></div>
+                        <div className="w-2 h-2 rounded-full bg-[#C8A951]"></div>
+                        <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#C8A951]/30"></div>
                     </div>
 
                     <p className="text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed mb-8">
-                        Ao longo de quase quatro décadas, entregamos centenas de projetos residenciais e corporativos, sempre com alta precisão, estética e pontualidade. Veja o que nossos clientes dizem sobre a experiência com a Nunes:
+                        Ao longo de quase quatro décadas, entregamos centenas de projetos residenciais e corporativos, sempre com alta precisão, estética e pontualidade. Veja o que nossos clientes dizem sobre a experiência com a Largman:
                     </p>
 
-                    <div className="inline-flex items-center justify-center gap-4 px-8 py-4 bg-gradient-to-r from-white/90 to-white/80 backdrop-blur-md border border-[#1B4B7B]/20 rounded-2xl shadow-xl">
+                    <div className="inline-flex items-center justify-center gap-4 px-8 py-4 bg-gradient-to-r from-white/90 to-white/80 backdrop-blur-md border border-[#C8A951]/20 rounded-2xl shadow-xl">
                         <div className="flex items-center gap-3">
-                            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#1B4B7B]/10 to-[#1B4B7B]/5 flex items-center justify-center border-2 border-[#1B4B7B]/20">
-                                <FiStar className="w-8 h-8 text-[#1B4B7B]" />
+                            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#C8A951]/10 to-[#C8A951]/5 flex items-center justify-center border-2 border-[#C8A951]/20">
+                                <FiStar className="w-8 h-8 text-[#C8A951]" />
                             </div>
                             <div className="text-left">
                                 <div className="flex items-baseline gap-2">
-                                    <span className="text-4xl md:text-5xl font-bold text-[#1B4B7B]">
+                                    <span className="text-4xl md:text-5xl font-bold text-[#C8A951]">
                                         {googleRating.toFixed(1)}
                                     </span>
                                     <span className="text-xl text-neutral-600">/ 5</span>
@@ -127,10 +127,10 @@ export default function Testimonials() {
                                         <FiStar
                                             key={i}
                                             className={`w-5 h-5 ${i < Math.floor(googleRating)
-                                                    ? 'text-yellow-400 fill-yellow-400'
-                                                    : i < googleRating
-                                                        ? 'text-yellow-400 fill-yellow-400/50'
-                                                        : 'text-neutral-300'
+                                                ? 'text-yellow-400 fill-yellow-400'
+                                                : i < googleRating
+                                                    ? 'text-yellow-400 fill-yellow-400/50'
+                                                    : 'text-neutral-300'
                                                 }`}
                                         />
                                     ))}
@@ -154,7 +154,7 @@ export default function Testimonials() {
                 {isLoadingReviews ? (
                     <div className="flex items-center justify-center py-20">
                         <div className="flex flex-col items-center gap-4">
-                            <div className="w-12 h-12 border-4 border-[#1B4B7B]/20 border-t-[#1B4B7B] rounded-full animate-spin"></div>
+                            <div className="w-12 h-12 border-4 border-[#C8A951]/20 border-t-[#C8A951] rounded-full animate-spin"></div>
                             <p className="text-neutral-600">Carregando avaliações...</p>
                         </div>
                     </div>
@@ -200,7 +200,7 @@ export default function Testimonials() {
                             href={`https://www.google.com/maps/place/?q=place_id:${googlePlaceId}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group inline-flex items-center justify-center gap-3 bg-white/90 backdrop-blur-md border-2 border-[#1B4B7B]/20 text-[#1B4B7B] px-8 py-4 rounded-xl font-semibold text-lg hover:bg-[#1B4B7B] hover:text-white hover:border-[#1B4B7B] transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1"
+                            className="group inline-flex items-center justify-center gap-3 bg-white/90 backdrop-blur-md border-2 border-[#C8A951]/20 text-[#C8A951] px-8 py-4 rounded-xl font-semibold text-lg hover:bg-[#C8A951] hover:text-white hover:border-[#C8A951] transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1"
                         >
                             <span>Ver todas as avaliações no Google</span>
                         </a>
@@ -213,12 +213,12 @@ export default function Testimonials() {
 
 function TestimonialCard({ depoimento }) {
     return (
-        <div className="group relative bg-white p-6 md:p-8 rounded-2xl border border-neutral-200/80 hover:border-[#1B4B7B]/40 transition-all duration-500 shadow-sm hover:shadow-2xl transform hover:-translate-y-2 overflow-hidden h-full">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#1B4B7B]/0 via-[#1B4B7B]/0 to-[#1B4B7B]/0 group-hover:from-[#1B4B7B]/5 group-hover:via-transparent group-hover:to-transparent transition-all duration-500 pointer-events-none"></div>
+        <div className="group relative bg-white p-6 md:p-8 rounded-2xl border border-neutral-200/80 hover:border-[#C8A951]/40 transition-all duration-500 shadow-sm hover:shadow-2xl transform hover:-translate-y-2 overflow-hidden h-full">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#C8A951]/0 via-[#C8A951]/0 to-[#C8A951]/0 group-hover:from-[#C8A951]/5 group-hover:via-transparent group-hover:to-transparent transition-all duration-500 pointer-events-none"></div>
 
             {depoimento.link && (
                 <div className="absolute top-4 right-4 z-10">
-                    <a href={depoimento.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 px-3 py-1 bg-white/90 backdrop-blur-sm border border-neutral-200 rounded-full text-xs font-medium text-neutral-700 hover:bg-white hover:border-[#1B4B7B]/40 transition-all">
+                    <a href={depoimento.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 px-3 py-1 bg-white/90 backdrop-blur-sm border border-neutral-200 rounded-full text-xs font-medium text-neutral-700 hover:bg-white hover:border-[#C8A951]/40 transition-all">
                         Google
                     </a>
                 </div>
@@ -233,17 +233,17 @@ function TestimonialCard({ depoimento }) {
                 </div>
 
                 <p className="text-neutral-700 mb-4 md:mb-6 leading-relaxed text-sm md:text-base italic relative">
-                    <span className="absolute -left-1 -top-1 md:-left-2 text-3xl md:text-4xl text-[#1B4B7B]/10 font-serif leading-none">"</span>
+                    <span className="absolute -left-1 -top-1 md:-left-2 text-3xl md:text-4xl text-[#C8A951]/10 font-serif leading-none">"</span>
                     {depoimento.texto}
-                    <span className="absolute -right-1 -bottom-3 md:-bottom-4 text-3xl md:text-4xl text-[#1B4B7B]/10 font-serif leading-none">"</span>
+                    <span className="absolute -right-1 -bottom-3 md:-bottom-4 text-3xl md:text-4xl text-[#C8A951]/10 font-serif leading-none">"</span>
                 </p>
 
                 <div className="flex items-center gap-3 pt-4 border-t border-neutral-200/80">
                     {depoimento.foto ? (
                         <img src={depoimento.foto} alt={depoimento.nome} className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-neutral-200" />
                     ) : (
-                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-[#1B4B7B]/20 to-[#1B4B7B]/10 flex items-center justify-center border-2 border-neutral-200">
-                            <span className="text-base md:text-lg font-bold text-[#1B4B7B]">{depoimento.nome.charAt(0).toUpperCase()}</span>
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-[#C8A951]/20 to-[#C8A951]/10 flex items-center justify-center border-2 border-neutral-200">
+                            <span className="text-base md:text-lg font-bold text-[#C8A951]">{depoimento.nome.charAt(0).toUpperCase()}</span>
                         </div>
                     )}
                     <div className="flex-1">
@@ -255,7 +255,7 @@ function TestimonialCard({ depoimento }) {
                     </div>
                 </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#1B4B7B]/0 to-transparent group-hover:via-[#1B4B7B] transition-all duration-500"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#C8A951]/0 to-transparent group-hover:via-[#C8A951] transition-all duration-500"></div>
         </div>
     )
 }

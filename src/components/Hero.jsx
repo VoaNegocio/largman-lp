@@ -1,29 +1,36 @@
 import { FiStar, FiAward, FiUsers } from 'react-icons/fi'
-import { WHATSAPP_URL } from '../constants'
+import { WHATSAPP_URL, LOGO_URL } from '../constants'
 
 export default function Hero() {
     return (
         <section className="relative min-h-screen flex items-center overflow-hidden">
             {/* Background com imagem do banner */}
             <div className="absolute inset-0 z-0">
+                {/* Imagem Mobile */}
                 <img
-                    src="/fotobanner1.png"
-                    alt="Ambiente premium com móveis planejados Nunes Móveis"
-                    className="w-full h-full object-cover scale-105 transition-transform duration-700 ease-out"
+                    src="/hero-largman-mobile.jpg"
+                    alt="Ambiente premium com móveis planejados"
+                    className="w-full h-full object-cover md:hidden"
+                />
+                {/* Imagem Desktop */}
+                <img
+                    src="/hero-largman-desktop.jpg"
+                    alt="Ambiente premium com móveis planejados"
+                    className="hidden md:block w-full h-full object-cover scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/30"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#1B4B7B]/20 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#C8A951]/20 via-transparent to-transparent"></div>
             </div>
 
             {/* VERSÃO MOBILE - Hero Section Alternativa */}
             <div className="md:hidden relative z-10 w-full px-4 py-8">
                 <div className="space-y-6">
                     <div className="text-center">
-                        <div className="inline-block bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20">
+                        <div className="inline-block bg-white/10 backdrop-blur-sm p-2 rounded-xl border border-white/20">
                             <img
-                                src="/LOGO NUNES.png"
-                                alt="Nunes Móveis - Móveis Planejados"
-                                className="h-10 md:h-14 w-auto object-contain"
+                                src={LOGO_URL}
+                                alt="Largman - Móveis Planejados"
+                                className="h-24 md:h-36 w-auto object-contain"
                             />
                         </div>
                     </div>
@@ -41,7 +48,7 @@ export default function Hero() {
                             href={WHATSAPP_URL}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative flex items-center justify-center gap-3 bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] text-white px-6 py-4 rounded-xl font-bold text-base shadow-2xl hover:shadow-[0_0_30px_rgba(37,211,102,0.6)] transition-all duration-300 transform hover:scale-105 animate-pulse-slow overflow-hidden w-full"
+                            className="group relative flex items-center justify-center gap-3 bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] text-white px-6 py-4 rounded-xl font-bold text-base btn-3d-whatsapp animate-pulse-slow overflow-hidden w-full"
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
 
@@ -55,7 +62,7 @@ export default function Hero() {
                     <div className="grid grid-cols-2 gap-3 pt-2">
                         <div className="bg-white/90 backdrop-blur-md border border-white/20 rounded-xl px-3 py-3 shadow-lg">
                             <div className="flex items-center gap-2">
-                                <FiStar className="w-5 h-5 text-[#1B4B7B] flex-shrink-0" />
+                                <FiStar className="w-5 h-5 text-[#C8A951] flex-shrink-0" />
                                 <p className="text-xs text-neutral-800 font-semibold leading-tight">
                                     8 anos de experiência
                                 </p>
@@ -63,7 +70,7 @@ export default function Hero() {
                         </div>
                         <div className="bg-white/90 backdrop-blur-md border border-white/20 rounded-xl px-3 py-3 shadow-lg">
                             <div className="flex items-center gap-2">
-                                <FiUsers className="w-5 h-5 text-[#1B4B7B] flex-shrink-0" />
+                                <FiUsers className="w-5 h-5 text-[#C8A951] flex-shrink-0" />
                                 <p className="text-xs text-neutral-800 font-semibold leading-tight">
                                     Design de interiores
                                 </p>
@@ -80,11 +87,11 @@ export default function Hero() {
 
                         <div className="space-y-6 md:space-y-8">
                             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
-                                <div className="inline-block mb-3 md:mb-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20">
+                                <div className="inline-block mb-3 md:mb-4 bg-white/10 backdrop-blur-sm p-2 rounded-xl border border-white/20">
                                     <img
-                                        src="/LOGO NUNES.png"
-                                        alt="Nunes Móveis - Móveis Planejados"
-                                        className="h-10 md:h-14 w-auto object-contain"
+                                        src={LOGO_URL}
+                                        alt="Largman - Móveis Planejados"
+                                        className="h-24 md:h-36 w-auto object-contain"
                                     />
                                 </div>
                                 <span className="block text-white font-bold drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)] [text-shadow:_2px_2px_8px_rgba(0,0,0,0.9)]">
@@ -93,7 +100,7 @@ export default function Hero() {
                             </h1>
 
                             <div className="relative">
-                                <div className="absolute -left-4 md:-left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-[#1B4B7B]/60 via-[#1B4B7B]/40 to-transparent rounded-full"></div>
+                                <div className="absolute -left-4 md:-left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-[#C8A951]/60 via-[#C8A951]/40 to-transparent rounded-full"></div>
                                 <p className="text-lg md:text-xl lg:text-2xl text-white/95 leading-relaxed max-w-3xl font-light pl-6 md:pl-8 drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)] [text-shadow:_1px_1px_4px_rgba(0,0,0,0.8)]">
                                     Mais que móveis: o cenário do seu próximo capítulo, com foco em quem busca excelência, pontualidade e facilidade na hora de planejar.
                                 </p>
@@ -102,8 +109,8 @@ export default function Hero() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="group flex items-start gap-4 bg-white/90 backdrop-blur-md border border-white/20 rounded-2xl px-6 py-5 shadow-xl hover:bg-white/95 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
-                                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#1B4B7B]/10 flex items-center justify-center group-hover:bg-[#1B4B7B]/20 transition-colors">
-                                    <FiStar className="w-6 h-6 text-[#1B4B7B]" />
+                                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#C8A951]/10 flex items-center justify-center group-hover:bg-[#C8A951]/20 transition-colors">
+                                    <FiStar className="w-6 h-6 text-[#C8A951]" />
                                 </div>
                                 <div>
                                     <p className="text-neutral-800 font-semibold text-base leading-snug">
@@ -113,14 +120,14 @@ export default function Hero() {
                             </div>
 
                             <div className="group flex items-start gap-4 bg-white/90 backdrop-blur-md border border-white/20 rounded-2xl px-6 py-5 shadow-xl hover:bg-white/95 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
-                                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#1B4B7B]/10 flex items-center justify-center group-hover:bg-[#1B4B7B]/20 transition-colors">
-                                    <FiAward className="w-6 h-6 text-[#1B4B7B]" />
+                                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#C8A951]/10 flex items-center justify-center group-hover:bg-[#C8A951]/20 transition-colors">
+                                    <FiAward className="w-6 h-6 text-[#C8A951]" />
                                 </div>
                                 <div className="flex-1">
                                     <p className="text-neutral-800 font-bold text-base leading-tight mb-1">
                                         Alta qualidade:
                                     </p>
-                                    <p className="text-[#1B4B7B] font-extrabold text-lg leading-tight">
+                                    <p className="text-[#C8A951] font-extrabold text-lg leading-tight">
                                         100% MDF
                                     </p>
                                 </div>
@@ -132,7 +139,7 @@ export default function Hero() {
                                 href={WHATSAPP_URL}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-2xl hover:shadow-[0_0_30px_rgba(37,211,102,0.6)] transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 animate-pulse-slow overflow-hidden"
+                                className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#25D366] via-[#20BA5A] to-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-lg btn-3d-whatsapp animate-pulse-slow overflow-hidden"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
 
@@ -148,7 +155,7 @@ export default function Hero() {
 
                             <a
                                 href="#diferenciais"
-                                className="group inline-flex items-center justify-center gap-2 md:gap-3 bg-white backdrop-blur-md border-2 border-white text-[#1B4B7B] px-3 py-2 md:px-6 md:py-3 rounded-xl font-semibold text-base md:text-xl hover:bg-[#1B4B7B] hover:text-white hover:border-[#1B4B7B] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
+                                className="group inline-flex items-center justify-center gap-2 md:gap-3 bg-white backdrop-blur-md border-2 border-white text-[#C8A951] px-3 py-2 md:px-6 md:py-3 rounded-xl font-semibold text-base md:text-xl hover:bg-[#C8A951] hover:text-white hover:border-[#C8A951] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
                             >
                                 <span className="drop-shadow-sm">Ver Diferenciais</span>
                                 <svg className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

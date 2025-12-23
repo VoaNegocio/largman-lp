@@ -3,13 +3,11 @@ import GalleryModal from './GalleryModal'
 import { WHATSAPP_URL, GALLERY_IMAGES, SECTION_VIDEOS } from '../constants'
 
 export default function Differentials() {
-    const [activeTab, setActiveTab] = useState('banheiro')
+    const [activeTab, setActiveTab] = useState('projetos')
 
     // Indices states
     const [indices, setIndices] = useState({
-        banheiro: 0,
-        sala: 0,
-        cozinha: 0
+        projetos: 0
     })
 
     const [selectedIndex, setSelectedIndex] = useState(null) // For modal
@@ -69,8 +67,8 @@ export default function Differentials() {
     return (
         <section id="diferenciais" className="pt-8 md:pt-12 pb-2 md:pb-3 px-0 bg-gradient-to-b from-white via-neutral-50/30 to-white relative overflow-hidden">
             <div className="absolute inset-0 opacity-[0.02]">
-                <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#1B4B7B] rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#1B4B7B] rounded-full blur-3xl"></div>
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#C8A951] rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#C8A951] rounded-full blur-3xl"></div>
             </div>
 
             <div className="max-w-7xl mx-auto relative z-10">
@@ -85,7 +83,7 @@ export default function Differentials() {
 
                     <div className="max-w-6xl mx-auto">
                         <div className="flex items-center justify-center gap-2 md:gap-4 mb-8 overflow-x-auto pb-2 scrollbar-hide">
-                            <button className="relative px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold text-base md:text-lg transition-all duration-300 whitespace-nowrap capitalize bg-[#1B4B7B] text-white shadow-lg shadow-[#1B4B7B]/30 cursor-default">
+                            <button className="relative px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold text-base md:text-lg transition-all duration-300 whitespace-nowrap capitalize bg-[#C8A951] text-white shadow-lg shadow-[#C8A951]/30 cursor-default">
                                 Projetos
                                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/50 rounded-b-xl"></div>
                             </button>
@@ -173,7 +171,7 @@ export default function Differentials() {
                                                 <button
                                                     key={index}
                                                     onClick={() => setCurrentIndex(index)}
-                                                    className={`h-2 rounded-full transition-all duration-300 ${index === getCurrentIndex() ? 'w-8 bg-[#1B4B7B]' : 'w-2 bg-neutral-300'
+                                                    className={`h-2 rounded-full transition-all duration-300 ${index === getCurrentIndex() ? 'w-8 bg-[#C8A951]' : 'w-2 bg-neutral-300'
                                                         }`}
                                                     aria-label={`Ir para imagem ${index + 1}`}
                                                 />
@@ -191,7 +189,7 @@ export default function Differentials() {
                         href={WHATSAPP_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#1B4B7B] to-[#153a5f] text-white px-10 py-4 rounded-xl font-semibold text-lg hover:from-[#153a5f] hover:to-[#1B4B7B] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
+                        className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#C8A951] to-[#8C7335] text-white px-10 py-4 rounded-xl font-semibold text-lg hover:from-[#8C7335] hover:to-[#C8A951] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
                     >
                         <span>Solicitar orçamento personalizado</span>
                         <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

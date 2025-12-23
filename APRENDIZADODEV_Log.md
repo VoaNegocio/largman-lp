@@ -5612,3 +5612,48 @@ A arquitetura atual permite fácil expansão:
 - **Temas:** Variáveis CSS e configs do Tailwind permitem trocas globais de cor.
 
 ---
+
+# 🛋️ Projeto: Largman Planejados
+
+## Componentes de UI Aprovados (Design System)
+
+### 1. Paginação de Galeria (Dots)
+*Design moderno com blur e indicador ativo em gradiente dourado.*
+
+```jsx
+<div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 bg-white/15 backdrop-blur-xl px-6 py-3 rounded-2xl border-2 border-white/30 shadow-2xl z-20">
+  <button className="h-3 rounded-full transition-all duration-300 w-3 bg-white/40 hover:bg-white/60" aria-label="Ir para imagem 1"></button>
+  <button className="h-3 rounded-full transition-all duration-300 w-3 bg-white/40 hover:bg-white/60" aria-label="Ir para imagem 2"></button>
+  <button className="h-3 rounded-full transition-all duration-300 w-3 bg-white/40 hover:bg-white/60" aria-label="Ir para imagem 3"></button>
+  <button className="h-3 rounded-full transition-all duration-300 w-10 bg-gradient-to-r from-[#C8A951] to-[#E0C370] shadow-lg shadow-[#C8A951]/50" aria-label="Ir para imagem 4"></button>
+  <button className="h-3 rounded-full transition-all duration-300 w-3 bg-white/40 hover:bg-white/60" aria-label="Ir para imagem 5"></button>
+  {/* ... outros botões ... */}
+</div>
+```
+
+### 2. Botão de Navegação (Next/Prev)
+*Botão flutuante com glassmorphism e borda sutil.*
+
+```jsx
+<button className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/15 hover:bg-white/25 backdrop-blur-xl text-white p-5 rounded-2xl transition-all duration-300 hover:scale-110 border-2 border-white/30 hover:border-white/50 shadow-2xl z-20 group/next" aria-label="Próxima imagem">
+  <svg className="w-7 h-7 group-hover/next:translate-x-[3px] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7"></path>
+  </svg>
+</button>
+```
+
+### 3. Contador de Slides
+*Indicador numérico com pulso dourado.*
+
+```jsx
+<div className="absolute top-6 left-6 bg-white/15 backdrop-blur-xl px-6 py-3 rounded-2xl border-2 border-white/30 shadow-2xl z-20">
+  <div className="flex items-center gap-2">
+    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#C8A951] to-[#E0C370] animate-pulse"></div>
+    <p className="text-white text-base font-bold">
+      <span className="text-[#C8A951]">1</span>
+      <span className="text-white/60 mx-2">/</span>
+      <span className="text-white/80">11</span>
+    </p>
+  </div>
+</div>
+```

@@ -1,12 +1,12 @@
 import { FiStar } from 'react-icons/fi'
-import { WHATSAPP_URL, CONTACT_INFO } from '../constants'
+import { WHATSAPP_URL, CONTACT_INFO, LOGO_URL } from '../constants'
 
 export default function Footer() {
     return (
         <footer className="relative bg-gradient-to-b from-neutral-900 via-neutral-900 to-black text-white py-16 md:py-20 px-4 overflow-hidden">
             <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#1B4B7B] rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#1B4B7B] rounded-full blur-3xl"></div>
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#C8A951] rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#C8A951] rounded-full blur-3xl"></div>
             </div>
 
             <div className="max-w-7xl mx-auto relative z-10">
@@ -15,8 +15,8 @@ export default function Footer() {
                     <div className="lg:col-span-1">
                         <div className="mb-6 inline-block bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20">
                             <img
-                                src="/LOGO NUNES.png"
-                                alt="Nunes Móveis - Móveis Planejados"
+                                src={LOGO_URL}
+                                alt="Largman - Móveis Planejados"
                                 className="h-10 md:h-14 w-auto object-contain"
                             />
                         </div>
@@ -28,7 +28,7 @@ export default function Footer() {
                     {/* Coluna 2: Contato */}
                     <div>
                         <h3 className="text-lg font-bold mb-6 text-white flex items-center gap-2">
-                            <div className="w-1 h-6 bg-gradient-to-b from-[#1B4B7B] to-[#2a6ba8] rounded-full"></div>
+                            <div className="w-1 h-6 bg-gradient-to-b from-[#C8A951] to-[#E0C370] rounded-full"></div>
                             Contato
                         </h3>
                         <div className="space-y-4">
@@ -56,7 +56,7 @@ export default function Footer() {
                     {/* Coluna 3: Localização */}
                     <div>
                         <h3 className="text-lg font-bold mb-6 text-white flex items-center gap-2">
-                            <div className="w-1 h-6 bg-gradient-to-b from-[#1B4B7B] to-[#2a6ba8] rounded-full"></div>
+                            <div className="w-1 h-6 bg-gradient-to-b from-[#C8A951] to-[#E0C370] rounded-full"></div>
                             Localização
                         </h3>
                         <div className="space-y-2 text-neutral-300">
@@ -75,7 +75,7 @@ export default function Footer() {
                     {/* Coluna 4: Atendimento */}
                     <div>
                         <h3 className="text-lg font-bold mb-6 text-white flex items-center gap-2">
-                            <div className="w-1 h-6 bg-gradient-to-b from-[#1B4B7B] to-[#2a6ba8] rounded-full"></div>
+                            <div className="w-1 h-6 bg-gradient-to-b from-[#C8A951] to-[#E0C370] rounded-full"></div>
                             Atendimento
                         </h3>
                         <p className="text-neutral-300 leading-relaxed text-sm mb-4">
@@ -95,20 +95,20 @@ export default function Footer() {
                         <div className="w-full border-t border-gradient-to-r from-transparent via-neutral-700 to-transparent"></div>
                     </div>
                     <div className="relative flex justify-center">
-                        <div className="w-16 h-px bg-gradient-to-r from-transparent via-[#1B4B7B] to-transparent"></div>
+                        <div className="w-16 h-px bg-gradient-to-r from-transparent via-[#C8A951] to-transparent"></div>
                     </div>
                 </div>
 
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-neutral-800/50">
                     <div className="text-center md:text-left">
                         <p className="text-neutral-400 text-sm">
-                            &copy; {new Date().getFullYear()} <span className="text-white font-semibold">Nunes Móveis</span>. Todos os direitos reservados.
+                            &copy; {new Date().getFullYear()} <span className="text-white font-semibold">Largman</span>. Todos os direitos reservados.
                         </p>
                     </div>
 
                     <div className="flex items-center gap-2 text-neutral-500 text-xs">
                         <span className="text-neutral-600">Landing Page made by</span>
-                        <span className="text-white font-semibold bg-gradient-to-r from-[#1B4B7B] to-[#2a6ba8] bg-clip-text text-transparent">
+                        <span className="text-white font-semibold bg-gradient-to-r from-[#C8A951] to-[#E0C370] bg-clip-text text-transparent">
                             Voa Negocio
                         </span>
                         <span className="text-neutral-600">e</span>
@@ -116,7 +116,7 @@ export default function Footer() {
                             href="https://almavictor.digital"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white font-semibold hover:text-[#2a6ba8] transition-colors duration-300"
+                            className="text-white font-semibold hover:text-[#E0C370] transition-colors duration-300"
                         >
                             Victor
                         </a>
