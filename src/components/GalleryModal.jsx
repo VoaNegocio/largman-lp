@@ -79,10 +79,10 @@ function GalleryModal({
         {/* Botão fechar - Premium */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-30 bg-white/15 hover:bg-white/25 backdrop-blur-xl text-white p-2 rounded-xl transition-all duration-300 hover:scale-110 border-2 border-white/30 hover:border-white/50 shadow-2xl group/close"
+          className="absolute top-3 right-3 md:top-4 md:right-4 z-30 bg-white/15 hover:bg-white/25 backdrop-blur-xl text-white p-1.5 md:p-2 rounded-xl transition-all duration-300 hover:scale-110 border-2 border-white/30 hover:border-white/50 shadow-2xl group/close"
           aria-label="Fechar modal"
         >
-          <svg className="w-5 h-5 group-hover/close:rotate-90 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 md:w-5 md:h-5 group-hover/close:rotate-90 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -113,10 +113,10 @@ function GalleryModal({
               e.stopPropagation()
               onPrev()
             }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/15 hover:bg-white/25 backdrop-blur-xl text-white p-3 rounded-xl transition-all duration-300 hover:scale-110 border-2 border-white/30 hover:border-white/50 shadow-2xl z-20 group/prev"
+            className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 bg-white/15 hover:bg-white/25 backdrop-blur-xl text-white p-2 md:p-3 rounded-xl transition-all duration-300 hover:scale-110 border-2 border-white/30 hover:border-white/50 shadow-2xl z-20 group/prev"
             aria-label="Imagem anterior"
           >
-            <svg className="w-6 h-6 group-hover/prev:translate-x-[-3px] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 md:w-6 md:h-6 group-hover/prev:translate-x-[-3px] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -129,10 +129,10 @@ function GalleryModal({
               e.stopPropagation()
               onNext()
             }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/15 hover:bg-white/25 backdrop-blur-xl text-white p-3 rounded-xl transition-all duration-300 hover:scale-110 border-2 border-white/30 hover:border-white/50 shadow-2xl z-20 group/next"
+            className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 bg-white/15 hover:bg-white/25 backdrop-blur-xl text-white p-2 md:p-3 rounded-xl transition-all duration-300 hover:scale-110 border-2 border-white/30 hover:border-white/50 shadow-2xl z-20 group/next"
             aria-label="Próxima imagem"
           >
-            <svg className="w-6 h-6 group-hover/next:translate-x-[3px] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 md:w-6 md:h-6 group-hover/next:translate-x-[3px] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -140,7 +140,7 @@ function GalleryModal({
 
         {/* Indicadores - Premium */}
         {images.length > 1 && (
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 bg-white/15 backdrop-blur-xl px-6 py-3 rounded-2xl border-2 border-white/30 shadow-2xl z-20">
+          <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2 md:gap-3 bg-white/15 backdrop-blur-xl px-4 py-2 md:px-6 md:py-3 rounded-2xl border-2 border-white/30 shadow-2xl z-20">
             {images.map((_, index) => (
               <button
                 key={index}
@@ -149,8 +149,8 @@ function GalleryModal({
                   onSelectImage(index)
                 }}
                 className={`h-3 rounded-full transition-all duration-300 ${index === currentIndex
-                    ? 'w-10 bg-gradient-to-r from-[#C8A951] to-[#E0C370] shadow-lg shadow-[#C8A951]/50'
-                    : 'w-3 bg-white/40 hover:bg-white/60'
+                  ? 'w-10 bg-gradient-to-r from-[#C8A951] to-[#E0C370] shadow-lg shadow-[#C8A951]/50'
+                  : 'w-3 bg-white/40 hover:bg-white/60'
                   }`}
                 aria-label={`Ir para imagem ${index + 1}`}
               />
@@ -160,10 +160,10 @@ function GalleryModal({
 
         {/* Contador de imagens - Premium */}
         {images.length > 1 && (
-          <div className="absolute top-6 left-6 bg-white/15 backdrop-blur-xl px-6 py-3 rounded-2xl border-2 border-white/30 shadow-2xl z-20">
+          <div className="absolute top-3 left-3 md:top-6 md:left-6 bg-white/15 backdrop-blur-xl px-3 py-1.5 md:px-6 md:py-3 rounded-2xl border-2 border-white/30 shadow-2xl z-20">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#C8A951] to-[#E0C370] animate-pulse"></div>
-              <p className="text-white text-base font-bold">
+              <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-gradient-to-r from-[#C8A951] to-[#E0C370] animate-pulse"></div>
+              <p className="text-white text-sm md:text-base font-bold">
                 <span className="text-[#C8A951]">{currentIndex + 1}</span>
                 <span className="text-white/60 mx-2">/</span>
                 <span className="text-white/80">{images.length}</span>

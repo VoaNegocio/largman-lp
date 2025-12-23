@@ -76,7 +76,7 @@ export default function Testimonials() {
     }
 
     return (
-        <section className="py-24 md:py-32 px-4 bg-gradient-to-b from-white via-neutral-50/50 to-white relative overflow-hidden">
+        <section className="pt-24 pb-0 md:py-32 px-4 bg-gradient-to-b from-white via-neutral-50/50 to-white relative overflow-hidden">
             <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute -top-32 -left-32 w-[900px] h-[400px] bg-gradient-to-r from-[#C8A951]/25 via-[#E0C370]/20 to-transparent rounded-full blur-[100px] rotate-12"></div>
                 <div className="absolute top-1/4 -right-40 w-[350px] h-[800px] bg-gradient-to-l from-[#E0C370]/22 via-[#C8A951]/18 to-transparent rounded-full blur-[120px] -rotate-6"></div>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { FiHome } from 'react-icons/fi'
 import GalleryModal from './GalleryModal'
 import { WHATSAPP_URL, AMBIENTES, SECTION_VIDEOS } from '../constants'
@@ -9,6 +9,17 @@ export default function AmbientsCarousel() {
     const [selectedAmbienteIndex, setSelectedAmbienteIndex] = useState(null)
 
     const section4Video = SECTION_VIDEOS.section4
+    const videoRef = useRef(null)
+
+    const togglePlay = () => {
+        if (videoRef.current) {
+            if (videoRef.current.paused) {
+                videoRef.current.play()
+            } else {
+                videoRef.current.pause()
+            }
+        }
+    }
 
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev + 1) % AMBIENTES.length)
@@ -118,8 +129,12 @@ export default function AmbientsCarousel() {
                                         ></iframe>
                                     </div>
                                 ) : (
-                                    <div className="relative w-full h-full">
+                                    <div
+                                        className="relative w-full h-full cursor-pointer"
+                                        onClick={togglePlay}
+                                    >
                                         <video
+                                            ref={videoRef}
                                             className="w-full h-full object-cover rounded-3xl"
                                             controls
                                             playsInline
@@ -218,13 +233,15 @@ export default function AmbientsCarousel() {
                         href={WHATSAPP_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#C8A951] via-[#E0C370] to-[#C8A951] text-white px-10 py-5 rounded-2xl font-bold text-lg md:text-xl hover:from-[#8C7335] hover:via-[#C8A951] hover:to-[#8C7335] transition-all duration-500 shadow-2xl shadow-[#C8A951]/30 hover:shadow-[#C8A951]/50 transform hover:-translate-y-2 hover:scale-105 relative overflow-hidden"
+                        className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#C8A951] via-[#E0C370] to-[#C8A951] text-white px-10 py-5 rounded-2xl font-bold text-lg md:text-xl btn-3d-gold animate-pulse-slow relative overflow-hidden"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                        <span className="relative z-10 drop-shadow-sm">Comece seu projeto com a gente</span>
-                        <svg className="w-6 h-6 relative z-10 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                        <span className="relative z-10 drop-shadow-sm font-extrabold tracking-wide">Solicitar orçamento personalizado</span>
+                        <svg className="w-6 h-6 relative z-10 group-hover:translate-x-2 transition-transform duration-300 drop-shadow-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
+                        {/* Efeito de brilho pulsante extra */}
+                        <div className="absolute inset-0 rounded-2xl border-2 border-white/50 animate-ping-slow opacity-30 pointer-events-none"></div>
                     </a>
                     <p className="mt-6 text-sm md:text-base text-neutral-500">
                         Atendimento personalizado e consultoria gratuita

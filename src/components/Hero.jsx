@@ -1,4 +1,4 @@
-import { FiStar, FiAward, FiUsers } from 'react-icons/fi'
+import { FiStar, FiAward, FiUsers, FiChevronDown } from 'react-icons/fi'
 import { WHATSAPP_URL, LOGO_URL } from '../constants'
 
 export default function Hero() {
@@ -165,6 +165,12 @@ export default function Hero() {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 cursor-pointer opacity-80 hover:opacity-100 transition-opacity">
+                <span className="text-white text-[10px] md:text-sm uppercase tracking-[0.2em] font-light text-shadow-sm">Explorar</span>
+                <FiChevronDown className="w-6 h-6 md:w-8 md:h-8 text-white animate-bounce" />
             </div>
         </section>
     )

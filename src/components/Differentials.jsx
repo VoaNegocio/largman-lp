@@ -189,12 +189,15 @@ export default function Differentials() {
                         href={WHATSAPP_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#C8A951] to-[#8C7335] text-white px-10 py-4 rounded-xl font-semibold text-lg hover:from-[#8C7335] hover:to-[#C8A951] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
+                        className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#C8A951] via-[#E0C370] to-[#C8A951] text-white px-10 py-5 rounded-2xl font-bold text-lg md:text-xl btn-3d-gold animate-pulse-slow relative overflow-hidden"
                     >
-                        <span>Solicitar orçamento personalizado</span>
-                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                        <span className="relative z-10 drop-shadow-sm font-extrabold tracking-wide">Solicitar orçamento personalizado</span>
+                        <svg className="w-6 h-6 relative z-10 group-hover:translate-x-2 transition-transform duration-300 drop-shadow-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
+                        {/* Efeito de brilho pulsante extra */}
+                        <div className="absolute inset-0 rounded-2xl border-2 border-white/50 animate-ping-slow opacity-30 pointer-events-none"></div>
                     </a>
                 </div>
 
