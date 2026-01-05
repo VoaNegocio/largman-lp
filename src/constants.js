@@ -44,7 +44,7 @@ export const GALLERY_IMAGES = {
         { src: '/projetos/projeto4.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
         { src: '/projetos/projeto5.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
         { src: '/projetos/projeto6.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
-        { src: '/projetos/projeto7.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
+
         { src: '/projetos/projeto8.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
         { src: '/projetos/projeto9.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
         { src: '/projetos/projeto10.jpg', alt: 'Projeto Largman', nome: 'Projeto' },

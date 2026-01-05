@@ -205,6 +205,7 @@ Lista de aprendizados reutilizados:
 - [ ] Atualizar status do projeto
 - [ ] Listar próximos passos
 - [ ] Documentar melhorias futuras possíveis
+- [ ] 🚀 **Otimizar performance:** Otimizar página para abrir rápido (Meta: Bater 100 no score PageSpeed/Lighthouse)
 
 ---
 

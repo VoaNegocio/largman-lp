@@ -11,12 +11,20 @@ export default function Hero() {
                     src="/hero-largman-mobile.jpg"
                     alt="Ambiente premium com móveis planejados"
                     className="w-full h-full object-cover md:hidden"
+                    width="800"
+                    height="600"
+                    fetchPriority="high"
+                    loading="eager"
                 />
                 {/* Imagem Desktop */}
                 <img
                     src="/hero-largman-desktop.jpg"
                     alt="Ambiente premium com móveis planejados"
                     className="hidden md:block w-full h-full object-cover scale-105 transition-transform duration-700 ease-out"
+                    width="1920"
+                    height="1080"
+                    fetchPriority="high"
+                    loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/30"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#C8A951]/20 via-transparent to-transparent"></div>

@@ -1,20 +1,24 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KXRW6HL8');</script>
-    <!-- End Google Tag Manager -->
-    
-    <!-- Google Analytics (GA4) - Opção direta (caso não use via GTM) -->
-    <!-- IMPORTANTE: Descomente e substitua G-XXXXXXXXXX pelo seu ID do Google Analytics 4 -->
-    <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KXRW6HL8');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics (GA4) - Opção direta (caso não use via GTM) -->
+  <!-- IMPORTANTE: Descomente e substitua G-XXXXXXXXXX pelo seu ID do Google Analytics 4 -->
+  <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -23,48 +27,58 @@
       gtag('config', 'G-XXXXXXXXXX');
     </script>
     -->
-    <!-- End Google Analytics -->
-    
-    <!-- Primary Meta Tags -->
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Primary Meta Tags -->
-    <title>Largman | Móveis Planejados de Alto Padrão</title>
-    <meta name="title" content="Largman | Móveis Planejados de Alto Padrão" />
-    <meta name="description" content="O encaixe perfeito para o seu espaço. Móveis planejados com design de interiores, excelência e sofisticação." />
-    <meta name="keywords" content="móveis planejados, móveis sob medida, design de interiores, marcenaria de alto padrão, Largman, móveis personalizados" />
-    <meta name="author" content="Largman" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="Portuguese" />
-    <meta name="revisit-after" content="7 days" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpg" href="/logo-largman.jpg" />
-    <link rel="apple-touch-icon" href="/logo-largman.jpg" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Largman | Móveis Planejados de Alto Padrão" />
-    <meta property="og:description" content="O encaixe perfeito para o seu espaço. Móveis planejados com design de interiores, excelência e sofisticação." />
-    <meta property="og:image" content="/logo-largman.jpg" />
-    <meta property="og:site_name" content="Largman" />
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Largman | Móveis Planejados de Alto Padrão" />
-    <meta name="twitter:description" content="O encaixe perfeito para o seu espaço. Móveis planejados com design de interiores, excelência e sofisticação." />
-    <meta name="twitter:image" content="/logo-largman.jpg" />
-    
-    <!-- Additional SEO -->
-    <meta name="theme-color" content="#C8A951" />
-    <meta name="msapplication-TileColor" content="#C8A951" />
-    <meta name="application-name" content="Largman" />
-    
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
+  <!-- End Google Analytics -->
+
+  <!-- Primary Meta Tags -->
+  <!-- Preload Hero Images -->
+  <link rel="preload" as="image" href="/hero-largman-desktop.jpg" media="(min-width: 768px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/hero-largman-mobile.jpg" media="(max-width: 767px)" fetchpriority="high" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Primary Meta Tags -->
+  <title>Largman | Móveis Planejados de Alto Padrão</title>
+  <meta name="title" content="Largman | Móveis Planejados de Alto Padrão" />
+  <meta name="description"
+    content="O encaixe perfeito para o seu espaço. Móveis planejados com design de interiores, excelência e sofisticação." />
+  <meta name="keywords"
+    content="móveis planejados, móveis sob medida, design de interiores, marcenaria de alto padrão, Largman, móveis personalizados" />
+  <meta name="author" content="Largman" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="Portuguese" />
+  <meta name="revisit-after" content="7 days" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpg" href="/logo-largman.jpg" />
+  <link rel="apple-touch-icon" href="/logo-largman.jpg" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Largman | Móveis Planejados de Alto Padrão" />
+  <meta property="og:description"
+    content="O encaixe perfeito para o seu espaço. Móveis planejados com design de interiores, excelência e sofisticação." />
+  <meta property="og:image" content="/logo-largman.jpg" />
+  <meta property="og:site_name" content="Largman" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Largman | Móveis Planejados de Alto Padrão" />
+  <meta name="twitter:description"
+    content="O encaixe perfeito para o seu espaço. Móveis planejados com design de interiores, excelência e sofisticação." />
+  <meta name="twitter:image" content="/logo-largman.jpg" />
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#C8A951" />
+  <meta name="msapplication-TileColor" content="#C8A951" />
+  <meta name="application-name" content="Largman" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FurnitureStore",
@@ -76,9 +90,9 @@
       "sameAs": []
     }
     </script>
-    
-    <!-- Local Business Schema -->
-    <script type="application/ld+json">
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
@@ -87,14 +101,16 @@
       "openingHours": "Mo-Sa 08:00-18:00"
     }
     </script>
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXRW6HL8"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXRW6HL8" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
