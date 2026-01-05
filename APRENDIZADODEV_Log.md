@@ -207,6 +207,18 @@ Lista de aprendizados reutilizados:
 - [ ] Documentar melhorias futuras possíveis
 - [ ] 🚀 **Otimizar performance:** Otimizar página para abrir rápido (Meta: Bater 100 no score PageSpeed/Lighthouse)
 
+#### ♿ Acessibilidade e Inclusão
+- [ ] ⌨️ **Navegação por Teclado:** Garantir que todos os elementos interativos sejam acessíveis (tabindex, focus states visíveis)
+- [ ] 🖼️ **Alt Text Obrigatório:** Todas as imagens informativas devem ter descrição (alt); imagens decorativas devem ter `alt=""`
+- [ ] 🎨 **Contraste de Cores:** Verificar se texto/fundo atendem ao padrão WCAG AA
+- [ ] 🏷️ **Semântica HTML:** Uso hierárquico correto de headings e landmarks
+
+#### ✍️ Conteúdo e Texto
+- [ ] 📝 **Revisão Ortográfica e Gramatical:** Zero erros de português
+- [ ] 📱 **Escaneabilidade:** Parágrafos curtos, uso de bullet points e negrito em palavras-chave
+- [ ] 🔍 **Hierarquia Tipográfica:** Tamanhos de fonte claros para diferenciar títulos, subtítulos e corpo
+- [ ] 💬 **Microcopy:** Mensagens de erro, sucesso e placeholders amigáveis e úteis
+
 ---
 
 **IMPORTANTE:** Este arquivo é um documento vivo. Sempre que houver um novo aprendizado, erro resolvido, ou implementação importante, adicione imediatamente na seção correspondente do projeto.

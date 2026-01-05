@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { FiHome } from 'react-icons/fi'
 import GalleryModal from './GalleryModal'
 import { WHATSAPP_URL, AMBIENTES, SECTION_VIDEOS } from '../constants'
@@ -10,6 +10,36 @@ export default function AmbientsCarousel() {
 
     const section4Video = SECTION_VIDEOS.section4
     const videoRef = useRef(null)
+
+    useEffect(() => {
+        const videoElement = videoRef.current
+        if (!videoElement) return
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        videoElement.play().catch(error => {
+                            console.log('Autoplay prevented:', error)
+                        })
+                    } else {
+                        videoElement.pause()
+                    }
+                })
+            },
+            {
+                threshold: 0.5, // Play when 50% visible
+            }
+        )
+
+        observer.observe(videoElement)
+
+        return () => {
+            if (videoElement) {
+                observer.unobserve(videoElement)
+            }
+        }
+    }, [section4Video])
 
     const togglePlay = () => {
         if (videoRef.current) {
