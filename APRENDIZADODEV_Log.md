@@ -796,9 +796,49 @@ Landing page premium desenvolvida para **Losekann Planejados**, empresa especial
 #### 7. Animações Preservadas e Adicionadas
 **Decisão**: Combinar animações existentes com efeitos 3D porque:
 - `animate-pulse-slow` no botão principal - atenção contínua
-- `animate-shimmer` no shimmer effect - brilho que atravessa
 - `animate-pulse blur-2xl` no glow effect - brilho pulsante dourado
 - Efeitos 3D adicionam profundidade sem competir com animações
+
+### Implementação: Autoplay de Vídeo ao Scroll (IntersectionObserver)
+**Data:** Implementação de playback automático focado em UX
+**Objetivo:** Iniciar o vídeo automaticamente quando o usuário rolar a página até a seção, garantindo que o conteúdo seja visto sem necessidade de clique inicial.
+
+**Pensamento e Decisões:**
+#### 1. Uso de IntersectionObserver
+**Decisão**: Utilizar a API `IntersectionObserver` em vez de eventos de scroll puramente porque:
+- É muito mais performático (não dispara eventos a cada pixel rolado).
+- Permite definir um "threshold" (limite) preciso de visibilidade (ex: 50%).
+
+#### 2. Lógica de Play/Pause Automático
+**Decisão**: O vídeo toca (`play()`) quando entra na tela e pausa (`pause()`) quando sai.
+- Economiza recursos do dispositivo (bateria/processamento) quando o vídeo não está visível.
+- Foca a atenção do usuário apenas quando ele está realmente vendo o conteúdo.
+
+#### 3. Autoplay Muted (Obrigatoriedade)
+**Decisão**: O vídeo DEVE iniciar mudo (`muted`) via código e atributo.
+- Políticas de navegador modernas bloqueiam autoplay com som.
+- Garante uma experiência não intrusiva.
+
+**Código Exemplo (React):**
+```javascript
+useEffect(() => {
+    const videoElement = videoRef.current
+    if (!videoElement) return
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                videoElement.play().catch(e => console.log('Autoplay blocked', e))
+            } else {
+                videoElement.pause()
+            }
+        })
+    }, { threshold: 0.5 }) // 50% visível para tocar
+
+    observer.observe(videoElement)
+    return () => observer.unobserve(videoElement)
+}, [])
+```
 
 ### Implementação do Código
 
