@@ -264,7 +264,7 @@ export default function AmbientsCarousel() {
                         href={WHATSAPP_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#C8A951] via-[#E0C370] to-[#C8A951] text-white px-10 py-5 rounded-2xl font-bold text-lg md:text-xl btn-3d-gold animate-pulse-slow relative overflow-hidden"
+                        className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#C8A951] via-[#E0C370] to-[#C8A951] text-white px-6 py-3 md:px-10 md:py-5 rounded-2xl font-bold text-base md:text-xl btn-3d-gold animate-pulse-slow relative overflow-hidden"
                     >
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                         <span className="relative z-10 drop-shadow-sm font-extrabold tracking-wide">Solicitar orçamento personalizado</span>

@@ -82,12 +82,7 @@ export default function Differentials() {
                     </h3>
 
                     <div className="max-w-6xl mx-auto">
-                        <div className="flex items-center justify-center gap-2 md:gap-4 mb-8 overflow-x-auto pb-2 scrollbar-hide">
-                            <button className="relative px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold text-base md:text-lg transition-all duration-300 whitespace-nowrap capitalize bg-[#C8A951] text-white shadow-lg shadow-[#C8A951]/30 cursor-default">
-                                Projetos
-                                <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/50 rounded-b-xl"></div>
-                            </button>
-                        </div>
+
 
                         <div className="relative">
                             {getActiveVideo() ? (
@@ -189,7 +184,7 @@ export default function Differentials() {
                         href={WHATSAPP_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#C8A951] via-[#E0C370] to-[#C8A951] text-white px-10 py-5 rounded-2xl font-bold text-lg md:text-xl btn-3d-gold animate-pulse-slow relative overflow-hidden"
+                        className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#C8A951] via-[#E0C370] to-[#C8A951] text-white px-6 py-3 md:px-10 md:py-5 rounded-2xl font-bold text-base md:text-xl btn-3d-gold animate-pulse-slow relative overflow-hidden"
                     >
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                         <span className="relative z-10 drop-shadow-sm font-extrabold tracking-wide">Solicitar orçamento personalizado</span>
