@@ -55,26 +55,26 @@ export const GALLERY_IMAGES = {
 export const DEPOIMENTOS_FALLBACK = [
     {
         nome: 'Maria Silva',
-        cidade: 'Uberaba - MG',
-        texto: 'Ficamos encantados com o resultado! A equipe da Nunes transformou nossa cozinha em um ambiente dos sonhos. Profissionalismo e qualidade impecáveis.',
+        cidade: null,
+        texto: 'Ficamos encantados com o resultado! O Victor transformou nossa cozinha em um ambiente dos sonhos. Profissionalismo e qualidade impecáveis.',
         nota: 5,
-        data: '2024-01-15',
+        data: null,
         foto: null
     },
     {
         nome: 'João Santos',
-        cidade: 'Uberaba - MG',
-        texto: '8 anos de experiência realmente fazem diferença. O projeto do nosso closet ficou perfeito, exatamente como planejamos. Recomendo!',
+        cidade: null,
+        texto: 'O projeto do nosso closet ficou perfeito, exatamente como planejamos. Recomendo!',
         nota: 5,
-        data: '2024-02-20',
+        data: null,
         foto: null
     },
     {
         nome: 'Ana Costa',
-        cidade: 'Uberaba - MG',
-        texto: 'Atendimento excepcional desde o primeiro contato. A designer entendeu perfeitamente nossa visão e entregou além das expectativas.',
+        cidade: null,
+        texto: 'Atendimento excepcional desde o primeiro contato. Entenderam perfeitamente nossa visão e entregou além das expectativas.',
         nota: 5,
-        data: '2024-03-10',
+        data: null,
         foto: null
     },
 ]

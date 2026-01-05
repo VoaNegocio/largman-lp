@@ -249,8 +249,9 @@ function TestimonialCard({ depoimento }) {
                     <div className="flex-1">
                         <p className="font-semibold text-neutral-900 mb-1 text-sm md:text-base">{depoimento.nome}</p>
                         <div className="flex items-center gap-2">
-                            <p className="text-xs md:text-sm text-neutral-600">{depoimento.cidade}</p>
-                            {depoimento.data && <><span className="text-neutral-400">•</span><p className="text-xs md:text-sm text-neutral-500">{depoimento.data}</p></>}
+                            {depoimento.cidade && <p className="text-xs md:text-sm text-neutral-600">{depoimento.cidade}</p>}
+                            {depoimento.cidade && depoimento.data && <span className="text-neutral-400">•</span>}
+                            {depoimento.data && <p className="text-xs md:text-sm text-neutral-500">{depoimento.data}</p>}
                         </div>
                     </div>
                 </div>
