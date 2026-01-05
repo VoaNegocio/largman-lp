@@ -16,7 +16,7 @@ function App() {
       <Suspense fallback={null}>
         <Testimonials />
         <AmbientsCarousel />
-        <Footer />
+
         <WhatsAppButton />
       </Suspense>
     </div>
