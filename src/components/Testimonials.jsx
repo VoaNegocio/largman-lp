@@ -176,10 +176,10 @@ export default function Testimonials() {
 
                             {depoimentos.length > 1 && (
                                 <div className="flex items-center justify-center gap-4 mt-4">
-                                    <button onClick={prevDepoimento} className="bg-white/90 hover:bg-white text-neutral-800 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110">
+                                    <button onClick={prevDepoimento} aria-label="Depoimento anterior" className="bg-white/90 hover:bg-white text-neutral-800 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110">
                                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
                                     </button>
-                                    <button onClick={nextDepoimento} className="bg-white/90 hover:bg-white text-neutral-800 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110">
+                                    <button onClick={nextDepoimento} aria-label="Próximo depoimento" className="bg-white/90 hover:bg-white text-neutral-800 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110">
                                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                     </button>
                                 </div>
@@ -240,7 +240,7 @@ function TestimonialCard({ depoimento }) {
 
                 <div className="flex items-center gap-3 pt-4 border-t border-neutral-200/80">
                     {depoimento.foto ? (
-                        <img src={depoimento.foto} alt={depoimento.nome} className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-neutral-200" />
+                        <img src={depoimento.foto} alt={depoimento.nome} loading="lazy" className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-neutral-200" />
                     ) : (
                         <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-[#C8A951]/20 to-[#C8A951]/10 flex items-center justify-center border-2 border-neutral-200">
                             <span className="text-base md:text-lg font-bold text-[#C8A951]">{depoimento.nome.charAt(0).toUpperCase()}</span>

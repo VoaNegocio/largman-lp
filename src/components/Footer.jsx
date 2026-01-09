@@ -36,6 +36,7 @@ export default function Footer() {
                                 href={WHATSAPP_URL}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Fale conosco no WhatsApp"
                                 className="group flex items-center gap-3 text-neutral-300 hover:text-white transition-all duration-300 hover:translate-x-1"
                             >
                                 <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-[#25D366]/20 to-[#25D366]/10 border border-[#25D366]/30 flex items-center justify-center group-hover:from-[#25D366]/30 group-hover:to-[#25D366]/20 transition-all duration-300">

@@ -2,6 +2,106 @@
 
 Este arquivo consolida todos os aprendizados, erros, acertos e implementações dos projetos de landing pages desenvolvidos. Serve como base de conhecimento para acelerar desenvolvimento futuro e evitar erros repetidos.
 
+
+---
+
+# 🏗️ Projeto: DRC Pro
+
+## Sobre o Projeto
+- **Descrição**: Empresa de Engenharia Consultiva e Projetos Complementares.
+- **Objetivo**: Landing Page para captação de leads B2B (Incorporadoras, Shoppings, Galpões).
+- **Foco de conversão**: Solicitar Proposta Técnica / Agendar Conversa.
+- **Nicho**: Engenharia Civil, Compatibilização de Projetos.
+
+## Conceito de Design
+- **Nome**: "Technical Blueprint"
+- **Filosofia**: Transmitir precisão técnica, organização e solidez.
+- **Paleta de Cores**:
+  - Dark Blue (#0B1221) - Fundo Hero/Footer
+  - Tech Blue (#1A56DB) - Acentos
+  - Brand Red (#B91C1C) - Destaques e Calls to Action
+  - White/Gray - Conteúdo e Cards
+- **Visual**: Uso de texturas de plantas baixas (blueprints), fade overlay, ícones técnicos finos.
+
+## Estrutura da Landing Page
+1. **Hero**: Background planta baixa técnica, Título de impacto sobre prazo, CTA Duplo.
+2. **Serviços**: Cards 3x1 com ícones técnicos e hover effect.
+3. **Diferenciais**: Grid com ícones e visual "timeline" de rastreabilidade.
+4. **Prova Social**: Logos de clientes e Depoimento de autoridade técnica.
+5. **CTA Final**: Foto de equipe em reunião (prova de humanização) + contato direto.
+6. **Footer**: Institucional simples.
+
+## Tecnologias Utilizadas
+- **React 18** (Vite Template)
+- **Tailwind CSS v3.4.17** (Decisão estratégica para estabilidade)
+- **Framer Motion** (Animações de entrada e hover)
+- **Lucide React** (Ícones coerentes)
+
+## Acertos e Melhorias Implementadas
+
+### ✅ Decisão: Downgrade para Tailwind v3
+**Data:** Início do projeto
+**Motivo:** Evitar problemas de condição de corrida do Tailwind v4 com Vite em ambiente de desenvolvimento.
+**Resultado:** Desenvolvimento fluido, sem FOUC (Flash of Unstyled Content), build estável.
+
+### ✅ Implementação: Background "Technical Blueprint"
+**Data:** Criação do Hero
+**Decisão:** Usar `generate_image` para criar uma textura de planta baixa técnica dark blue.
+**Efeito:** Transmite instantaneamente o nicho de engenharia sem poluir a leitura do texto (uso de overlays).
+
+### ✅ Componente: Premium 3D Button (Red/Blue variants)
+**Implementação**: Botão com múltiplas sombras e transform 3D no hover.
+**Adaptação**: Criadas variantes 'primary' (Red) para conversão agressiva e 'secondary' (Blue) para navegação.
+
+### ✅ Otimização Mobile
+**Data:** Fase de Refinamento
+**Ações:** Ajuste de tipografia (`text-3xl` vs `text-6xl`), padding responsivo (`py-16` mobile vs `py-24` desktop) e reordenação de flexbox (Imagem antes/depois do texto) para melhor experiência em telas pequenas.
+
+### ✅ Animação: Infinite Marquee Carousel
+**Data:** Fase de Refinamento
+**Implementação:** Substituição do grid de stats estático por um carrossel infinito (`animate={{ x: ["0%", "-50%"] }}`) para evitar empilhamento em telas pequenas e adicionar dinamismo moderno.
+
+### ✅ UX Mobile: Horizontal Swipe (Services)
+**Data:** Fase de Refinamento
+**Implementação:** Transformação do Grid de Serviços em um carrossel horizontal (`overflow-x-auto` + `snap-x`) para mobile, com indicadores visuais (dots).
+**Motivo:** Melhorar usabilidade em telas pequenas e evitar scroll vertical excessivo.
+
+### ⚠️ Erro Comum: Nesting de Layers CSS
+**Problema:** Ao adicionar classes utilitárias no `index.css`, ocorreu um erro de sintaxe ao aninhar `@layer utilities` dentro de `@layer base` (esquecimento de fechar a chave anterior).
+**Sintoma:** As classes utilitárias (ex: `.scrollbar-hide`) não eram aplicadas, mesmo parecendo corretas no código.
+**Solução:** Sempre verificar o fechamento das chaves de camadas (`@layer`) antes de abrir uma nova. O `vite` pode falhar silenciosamente ou exibir erro de parsing dependendo da configuração.
+
+---
+
+
+# 📸 [ÍCONE] Projeto: MakeDrive
+
+## Sobre o Projeto
+- **Descrição**: Plataforma de gestão de projetos técnicos e engenharia.
+- **Objetivo**: Landing Page de alta conversão para agendamento de demonstração.
+- **Conceito**: "Technical Blueprint" - Organização, Rastreabilidade, Eficiência.
+- **Público**: Arquitetos, Engenheiros, Gestores de Projetos.
+
+## Conceito de Design
+- **Nome**: "Engineering Excellence"
+- **Paleta**: 
+  - Dark Blue (#0B1221)
+  - Tech Blue (#1A56DB)
+  - Accent Cyan (#0EA5E9)
+- **Estilo**: Visual técnico, dark mode no hero, clean/white nos benefícios.
+
+## Estrutura
+1. Hero Section (Blueprints, Dark)
+2. Benefícios (White, Grid)
+3. Prova Social (Logos, Vídeo)
+4. Trust Badge (DRC Pro)
+5. Footer / CTA Final
+
+## Tecnologias
+- React 19 + Vite 7
+- Tailwind CSS v3.4.17 (Downgrade estratégico)
+- PostCSS + Autoprefixer
+
 ---
 
 ## 📋 Instruções para Documentação de Novos Projetos
@@ -5710,3 +5810,693 @@ A arquitetura atual permite fácil expansão:
   </div>
 </div>
 ```
+
+---
+
+# 💎 Projeto: Marmoraria Moriá
+
+## Sobre o Projeto
+- **Negócio:** Marmoraria especializada em pedras clássicas, refinadas e exóticas.
+- **Objetivo:** Landing Page de alta conversão para pedidos de orçamento via WhatsApp.
+- **Público:** Clientes residenciais e comerciais em busca de sofisticação e qualidade.
+- **Identidade:** Premium, confiável, elegante.
+
+## Conceito de Design
+- **Estilo:** Clean e Premium (Fundo branco/cinza claro, detalhes em verde WhatsApp e cinza escuro).
+- **Cores:**
+  - Principal: `#25D366` (Moria Green/WhatsApp)
+  - Textos: `#1F2937` (Gray 900), `#4B5563` (Gray 600)
+  - Fundo: `#F9FAFB` (Gray 50), `#FFFFFF` (White)
+- **Tipografia:** `Inter` (Sans-serif) para modernidade e legibilidade.
+
+## Implementações Especiais
+
+### Implementação: Animação Flip 3D em Cards de Serviços
+**Data:** 05/01/2026
+**Objetivo:** Adicionar interatividade premium à galeria de pedras, permitindo ver detalhes sem sair do contexto ou abrir modais, adicionando um "wow factor".
+**Pensamento e Decisões:**
+- Apenas zoom no hover é comum. O Flip 3D adiciona interatividade e sofisticação.
+- O verso do cartão permite incluir CTA ("Ver Detalhes") e descrições sem poluir a frente.
+- Utilizado `perspective` no container pai para criar profundidade 3D real.
+- `transform-style: preserve-3d` garante que os elementos filhos girem no espaço 3D.
+- `backface-visibility: hidden` oculta o verso quando não está virado.
+
+**Código CSS (Tailwind Utilities):**
+```css
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
+```
+
+**Estrutura do Componente (React):**
+```jsx
+const StoneCard = ({ title, image }) => (
+    <div className="group h-80 perspective-1000">
+        <div className="relative w-full h-full transition-all duration-700 transform-style-3d group-hover:rotate-y-180 rounded-lg shadow-sm hover:shadow-md">
+            {/* Front Face */}
+            <div className="absolute w-full h-full backface-hidden bg-white rounded-lg overflow-hidden">
+                <div className="h-64 overflow-hidden">
+                    <img src={image} alt={title} className="w-full h-full object-cover" />
+                </div>
+                <div className="p-4 text-center">
+                    <h3 className="font-semibold text-gray-800">{title}</h3>
+                </div>
+            </div>
+
+            {/* Back Face */}
+            <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-gray-900 rounded-lg overflow-hidden flex flex-col items-center justify-center p-6 text-center">
+                <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+                <p className="text-gray-300 text-sm mb-4">Toque de sofisticação para seu ambiente.</p>
+                <div className="inline-block px-4 py-2 bg-moria-green text-white rounded-full text-xs font-bold uppercase tracking-wide">
+                    Ver Detalhes
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+);
+```
+
+### Referência de Inspiração (Vue.js)
+Código original utilizado como base para a lógica de Tilt + Flip e Layering 3D.
+Este exemplo Vue implementa:
+1. Rastreamento de mouse para rotação (Tilt).
+2. Flip controlado por estado ou hover.
+3. Efeito de profundidade (Z-layers) nos elementos do verso.
+
+```vue
+<template>
+  <div class="flex h-screen flex-col items-center justify-center">
+    <figure
+      ref="flipContainer"
+      @mousemove="handleMouseMove"
+      @mouseleave="resetRotation"
+      class="flip-container relative h-96 w-64 cursor-pointer rounded-3xl"
+    >
+      <!-- Front -->
+      <div class="flip-card-front absolute left-0 top-0 flex h-full w-full items-center justify-center rounded-3xl bg-cover bg-center" />
+
+      <!-- Back -->
+      <figcaption class="flip-card-back absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-3 rounded-3xl bg-black p-4 text-white">
+        <h2 class="mb-2 text-2xl font-bold">Orange</h2>
+        <img src="..." class="size-24 rounded-full object-cover" />
+        <h3 class="font-semibold">Fresh, Juicy, and Zesty.</h3>
+        <!-- Tags... -->
+      </figcaption>
+    </figure>
+  </div>
+</template>
+
+<script setup>
+import { ref } from "vue";
+
+const flipContainer = ref(null);
+// Lógica de Tilt
+const handleMouseMove = (event) => {
+  const rect = flipContainer.value.getBoundingClientRect();
+  const mouseX = event.clientX - rect.left;
+  const mouseY = event.clientY - rect.top;
+  const rotateX = (mouseY / rect.height - 0.5) * 50;
+  const rotateY = -(mouseX / rect.width - 0.5) * 50;
+  flipContainer.value.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+};
+</script>
+
+<style scoped>
+.flip-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.flip-card-back h2 { transform: translateZ(40px); }
+.flip-card-back img { transform: translateZ(50px); } /* Profundidade Alta */
+</style>
+```
+
+---
+
+### 🚀 Refinamento: Profundidade 3D Real (Flip Sem Overflow)
+
+**Data:** 05/01/2026
+**Problema:** O efeito 3D parecia "achatado" (flat). Os textos e imagens não pareciam flutuar *fora* do cartão, mesmo usando `translateZ`.
+**Causa:** A propriedade `overflow: hidden` nas faces do cartão (`front` e `back`) estava cortando o contexto 3D. Quando o overflow é hidden, o navegador "achata" as camadas filhas para o plano do pai (flattening), anulando o efeito visual do `translateZ`.
+
+**Solução:**
+1. **Remover `overflow: hidden`** das faces frontal e traseira.
+2. Manter `transform-style: preserve-3d` em todos os containers aninhados.
+3. Adicionar `drop-shadow` nos elementos flutuantes. Diferente do `box-shadow` (que segue a caixa do elemento), o `drop-shadow` considera a transparência e reforça a percepção de que o texto está flutuando acima da superfície.
+4. Remover rastreio de mouse (Tilt JS) para focar em performance pura via CSS `transition`.
+
+**Código Otimizado Final (StoneCard):**
+```jsx
+const StoneCard = ({ title, image }) => {
+    return (
+        <div className="group h-80 perspective-1000">
+            {/* Flip Wrapper */}
+            <div className="relative w-full h-full transition-transform duration-500 transform-style-3d group-hover:rotate-y-180 rounded-lg shadow-sm hover:shadow-2xl">
+
+                {/* Front Face - Note: SEM overflow-hidden aqui para permitir relevo 3D */}
+                <div className="absolute w-full h-full backface-hidden bg-gray-50 rounded-lg transform-style-3d flex flex-col items-center justify-center pt-8 pb-4">
+                    {/* Imagem com translate-z para flutuar */}
+                    <div className="w-10/12 h-48 rounded-lg overflow-hidden transform-style-3d shadow-xl translate-z-30">
+                        <img src={image} alt={title} className="w-full h-full object-cover" />
+                    </div>
+                    {/* Título com sombra projetada */}
+                    <div className="p-4 text-center transform-style-3d mt-2">
+                        <h3 className="font-bold text-gray-800 text-lg translate-z-50 drop-shadow-lg">{title}</h3>
+                    </div>
+                </div>
+
+                {/* Back Face - Note: SEM overflow-hidden */}
+                <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-gray-900 rounded-lg flex flex-col items-center justify-center p-6 text-center transform-style-3d">
+                    <img
+                        src={image}
+                        alt={title}
+                        className="w-24 h-24 rounded-full object-cover mb-3 border-4 border-moria-green/30 translate-z-50 shadow-xl drop-shadow-2xl"
+                    />
+                    <h3 className="text-xl font-bold text-white mb-2 translate-z-40 drop-shadow-lg">{title}</h3>
+                    {/* Parágrafo com extrema profundidade (Z=60px) + Sombra Alta */}
+                    <p className="text-gray-300 text-sm mb-4 translate-z-60 drop-shadow-xl">Toque de sofisticação para seu ambiente.</p>
+                    <button type="button" className="inline-block px-4 py-2 bg-moria-green text-white rounded-full text-xs font-bold uppercase tracking-wide translate-z-50 shadow-lg cursor-pointer hover:scale-105 transition-transform drop-shadow-xl">
+                        Ver Detalhes
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
+```
+
+(Conteúdo anterior omitido para brevidade)
+...
+
+## Implementações Especiais
+### Video Flip Card (Interactive)
+
+**Data:** 06/01/2026
+**Descrição:** Card que realiza um flip 3D ao ser clicado, revelando um player de vídeo nativo no verso.
+**Funcionalidades:**
+- Flip 3D suave com CSS `rotate-y-180`.
+- Autoplay via `useEffect` ao virar (garante play em mobile).
+- Controles nativos ativos no verso (`controls={true}`).
+- Botão de fechar (X) que pausa o vídeo e reseta o tempo (`currentTime = 0`).
+- Remoção de overlays para visualização limpa do vídeo.
+
+**Código CSS (Tailwind Utilities):**
+Necessário adicionar no `index.css`:
+```css
+@layer utilities {
+  .perspective-1000 { perspective: 1000px; }
+  .transform-style-3d { transform-style: preserve-3d; }
+  .backface-hidden { backface-visibility: hidden; }
+  .rotate-y-180 { transform: rotateY(180deg); }
+}
+```
+
+**Código React (Componente):**
+```jsx
+// Sub-component for individual card logic
+const ServiceCard = ({ service, index }) => {
+    const [isFlipped, setIsFlipped] = useState(false);
+    const videoRef = useRef(null);
+
+    // Force Autoplay on Flip
+    useEffect(() => {
+        if (isFlipped && videoRef.current) {
+            setTimeout(() => {
+                videoRef.current.play().catch(e => console.log("Autoplay prevented:", e));
+            }, 300);
+        }
+    }, [isFlipped]);
+
+    const handleFlip = () => setIsFlipped(true);
+
+    const handleUnflip = (e) => {
+        e.stopPropagation();
+        setIsFlipped(false);
+        if (videoRef.current) {
+            videoRef.current.pause();
+            videoRef.current.currentTime = 0; // Reset video
+        }
+    };
+
+    return (
+        <div className="min-w-[85vw] md:min-w-0 snap-center flex p-1 perspective-1000">
+            <div className={`relative w-full transition-transform duration-700 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
+                
+                {/* Front Face */}
+                <Card className="flex flex-col h-full ... backface-hidden bg-white relative z-10">
+                   {/* ... content ... */}
+                    <button onClick={handleFlip}>Saiba mais</button>
+                </Card>
+
+                {/* Back Face (Video) */}
+                <div className="absolute inset-0 h-full w-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-xl bg-black">
+                     {/* Video Player Clean */}
+                     <video 
+                        ref={videoRef}
+                        className="w-full h-full object-cover"
+                        controls={true}
+                        playsInline
+                        loop
+                        muted={false} // Unmuted so user can hear
+                    >
+                        <source src={`/videos/video${index + 1}.mp4`} type="video/mp4" />
+                    </video> 
+                    
+                    {/* Close Button */}
+                    <button onClick={handleUnflip} className="...">✕</button>
+                </div>
+            </div>
+        </div>
+    );
+};
+```
+
+### Video Flip Card v2 (Premium 3D + Slow Motion)
+
+**Data:** 06/01/2026 (Atualizado)
+**Descrição:** Evolução do card flip anterior, adicionando efeito 3D real (elementos flutuantes), rotação "slow motion" cinematográfica e correção de fullscreen.
+**Melhorias v2:**
+- **3D Floating Elements:** Uso de `translate-z` e `drop-shadow` para descolar textos e ícones do fundo.
+- **Cinematic Slow Motion:** Aumentado tempo de rotação para `1500ms` para enfatizar o efeito 3D.
+- **Design "Blueprint Tech":** Marca d'água gigante e borda técnica.
+- **CTA Sólido:** Botão "Ver em ação" com animação de pulso e largura total.
+- **Fullscreen Video Fix:** CSS para garantir que vídeos verticais não cortem em tela cheia desktop.
+
+**Código CSS (Tailwind Utilities - Adições):**
+```css
+@layer utilities {
+  /* 3D Depth Levels */
+  .translate-z-0 { transform: translateZ(0px); }
+  .translate-z-30 { transform: translateZ(30px); }
+  .translate-z-50 { transform: translateZ(50px); }
+
+  /* Fullscreen Video Fix */
+  video:fullscreen { object-fit: contain; }
+  video:-webkit-full-screen { object-fit: contain; }
+}
+```
+
+**Código React (Componente v2):**
+```jsx
+const ServiceCard = ({ service, index }) => {
+    const [isFlipped, setIsFlipped] = useState(false);
+    const videoRef = useRef(null);
+
+    // Force Autoplay on Flip
+    useEffect(() => {
+        if (isFlipped && videoRef.current) {
+            setTimeout(() => videoRef.current.play().catch(console.log), 300);
+        }
+    }, [isFlipped]);
+
+    const handleFlip = () => setIsFlipped(true);
+
+    const handleUnflip = (e) => {
+        e.stopPropagation();
+        setIsFlipped(false);
+        if (videoRef.current) {
+            videoRef.current.pause();
+            videoRef.current.currentTime = 0;
+        }
+    };
+
+    return (
+        <div className="min-w-[85vw] md:min-w-0 snap-center flex p-1 perspective-1000">
+            {/* Wrapper com Slow Motion (1500ms) */}
+            <div className={`relative w-full transition-transform duration-[1500ms] transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
+                
+                {/* Front Face: Importante NÃO ter overflow-hidden geral, pois corta o 3D */}
+                <Card className="flex flex-col h-full hover:border-brand-blue/30 group p-6 md:p-8 w-full shadow-lg backface-hidden bg-white relative z-10 border-t-4 border-t-brand-blue transform-style-3d">
+                     {/* Watermark (Depth 0) */}
+                     <div className="absolute -right-4 -bottom-8 text-[120px] font-bold text-gray-100/50 leading-none select-none pointer-events-none font-heading z-0 translate-z-0">
+                        0{index + 1}
+                     </div>
+
+                    {/* Content (Depth 30) */}
+                    <div className="mb-6 p-4 rounded-full bg-blue-50 w-16 h-16 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300 relative z-10 translate-z-30 drop-shadow-md">
+                        <service.icon size={32} className="text-brand-blue group-hover:text-white transition-colors" />
+                    </div>
+                    <h3 className="text-xl font-bold text-brand-dark mb-3 relative z-10 translate-z-30 drop-shadow-sm">{service.title}</h3>
+                    <p className="text-gray-600 mb-8 flex-grow leading-relaxed relative z-10 translate-z-30">
+                        {service.description}
+                    </p>
+
+                    {/* CTA Button (Depth 50 - Highest) */}
+                    <div className="relative z-10 translate-z-50 drop-shadow-xl">
+                        <button
+                            onClick={handleFlip}
+                            className="w-full inline-flex items-center justify-center bg-brand-red text-white font-bold uppercase tracking-wider text-sm py-4 rounded-lg hover:bg-red-700 transition-all duration-300 cursor-pointer animate-pulse-scale shadow-lg shadow-brand-red/30"
+                        >
+                            Ver em ação <Play size={14} className="ml-2 fill-current" />
+                        </button>
+                    </div>
+                </Card>
+
+                {/* Back Face (Video) */}
+                <div className="absolute inset-0 h-full w-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-xl bg-black border border-brand-blue/20">
+                     <video 
+                        ref={videoRef}
+                        className="w-full h-full object-cover"
+                        controls={true}
+                        playsInline
+                        loop
+                        muted={false}
+                    >
+                        <source src={`/videos/video${index + 1}.mp4`} type="video/mp4" />
+                    </video> 
+                    <button onClick={handleUnflip} className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-brand-red transition-colors">✕</button>
+                </div>
+            </div>
+        </div>
+    );
+};
+```
+
+### Video Flip Card v3 (Custom Controls UI)
+
+**Data:** 06/01/2026 (Atualizado)
+**Problema Solucionado:** A sombra escura (overlay) nativa que navegadores mobile (Chrome/Safari) forçam sobre o vídeo ao usar `controls={true}`, poluindo o visual.
+**Solução:** Remover controles nativos e implementar UI própria com React + Lucide Icons.
+
+**Funcionalidades Customizadas:**
+- **Zero Sombra:** Vídeo 100% limpo, sem interferência do navegador.
+- **Play/Pause Toggle:** Clique em qualquer lugar do vídeo para pausar/tocar.
+- **Ícone Central:** Play grande aparece apenas quando pausado.
+- **Barra Inferior Flutuante:** Glassmorphism com Mute e Fullscreen, aparece no hover/tap.
+- **Ghost Watermark Fix:** O número de fundo ("01", "02") agora recebe `opacity-0` ao virar, evitando que apareça invertido no vídeo.
+- **Close Button:** Mantido no topo direito.
+
+**Código React Relevante (ServiceCard v3):**
+```jsx
+// Importações extras necessárias
+import { Pause, Volume2, VolumeX, Maximize } from 'lucide-react';
+
+const ServiceCard = ({ service, index }) => {
+    // Novos estados
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [isMuted, setIsMuted] = useState(false);
+
+    // Toggle Functions
+    const togglePlay = (e) => {
+        e.stopPropagation();
+        if (videoRef.current) {
+            if (videoRef.current.paused) {
+                videoRef.current.play();
+                setIsPlaying(true);
+            } else {
+                videoRef.current.pause();
+                setIsPlaying(false);
+            }
+        }
+    };
+
+    const toggleMute = (e) => {
+        e.stopPropagation();
+        if (videoRef.current) {
+            videoRef.current.muted = !videoRef.current.muted;
+            setIsMuted(videoRef.current.muted);
+        }
+    };
+
+    return (
+        // ...wrapper code
+        
+        {/* Back Face (Video) */}
+        <div className="absolute inset-0 h-full w-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-xl bg-black border border-brand-blue/20 group">
+            <div className="relative w-full h-full cursor-pointer" onClick={togglePlay}>
+                {/* 1. Controls removidos daqui */}
+                <video
+                    ref={videoRef}
+                    className="w-full h-full object-cover"
+                    playsInline
+                    loop
+                    muted={false}
+                    controls={false} // Crucial para não ter sombra
+                >
+                    <source src={`/videos/video${index + 1}.mp4`} type="video/mp4" />
+                </video>
+
+                {/* 2. Custom Play Indicator (Central) */}
+                {!isPlaying && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-[2px] transition-all">
+                        <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center pl-1">
+                            <Play size={32} className="text-white fill-current" />
+                        </div>
+                    </div>
+                )}
+
+                {/* 3. Close Button (Topo) */}
+                <button onClick={handleUnflip} className="...">✕</button>
+
+                 {/* 4. Barra de Controles (Bottom Glass) */}
+                 <div className="absolute bottom-4 left-4 right-4 z-20 flex justify-between items-center bg-black/40 backdrop-blur-md rounded-full px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button onClick={toggleFullscreen} className="text-white hover:text-brand-red">
+                        <Maximize size={20} />
+                    </button>
+                    <button onClick={toggleMute} className="text-white hover:text-brand-red">
+                        {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
+```
+
+---
+
+# 🏠 Projeto: Via Cor Revestimentos
+
+## Sobre o Projeto
+- **Nome**: Via Cor Revestimentos
+- **Objetivo**: Showroom de revestimentos premium e acabamentos de alto padrão.
+- **Foco**: Captação de leads e visitas ao showroom (Zona Sul SP).
+- **Stack**: React + Vite + Tailwind CSS.
+
+## 📅 Atualizações Recentes (07/01/2026)
+
+### ✅ Implementação: Favicon Personalizado
+**Data:** 07/01/2026
+**Ação:** Configuração do favicon oficial da marca.
+**Arquivo:** `index.html`
+**Código:**
+```html
+<link rel="icon" type="image/png" href="/viacor-logo-instagram .jpg" />
+```
+
+### ✅ Integração: Google Tag Manager (GTM)
+**Data:** 07/01/2026
+**Objetivo:** Habilitar rastreamento de conversões e analytics.
+**ID do Container:** `GTM-MSRLMTZT`
+**Implementação:**
+- Script no `<head>` para carregamento assíncrono.
+- Noscript no `<body>` para fallback.
+
+### 🎨 Refinamento: Stone Cards (Galeria de Pedras)
+**Data:** 07/01/2026
+**Componente:** `Services.jsx` / `StoneCard`
+**Problema:** As imagens dos cards estavam cortadas ou com proporção incorreta (quadradas), prejudicando a visualização das pedras naturais.
+**Solução:**
+- Ajuste para manter o **aspect ratio original** (vertical/retangular) das imagens.
+- Refinamento das dimensões do container para acomodar a altura natural da imagem.
+- Preservação do estilo e posicionamento dos títulos (`h3`).
+- **Resultado:** Visualização fiel das texturas e padrões das pedras, com design mais elegante.
+
+### 🚀 Otimização de Performance
+**Data:** 07/01/2026
+**Objetivo:** Maximizar score no Lighthouse e velocidade de carregamento.
+**Ações:**
+- **Code Splitting:** Configuração de lazy loading para componentes não críticos (`Testimonials`, `Benefits`, `CTA`, `Footer`) no `App.jsx`.
+- **Preload LCP:** Adicionado `<link rel="preload">` para a imagem principal do Hero (`/fotos/img1.jpg`) no `index.html`.
+- **Fonts:** Configuração de `preconnect` para Google Fonts e uso de `Swap` implícito via URL.
+
+---
+
+### 🔄 Implementação: Carrossel Infinito de Marcas
+**Data:** 07/01/2026
+**Componente:** `Brands.jsx`
+**Objetivo:** Modernizar a apresentação das marcas parceiras e unificar a experiência mobile/desktop.
+**Mudanças:**
+- **Layout Unificado:** Substituição das listas separadas (grid desktop / snap-carousel mobile) por um único componente de **Marquee Infinito**.
+- **Animação:** Uso de CSS `@keyframes scroll-infinite` para rolagem contínua automática.
+- **Interatividade:**
+    - `hover:pause`: O carrossel pausa suavemente ao passar o mouse, facilitando o clique.
+    - **Manutenção de Funcionalidade:** As marcas continuam sendo botões que abrem os modais de galeria específicos.
+- **Visual:** Adição de máscara de gradiente (`mask-image`) nas laterais para um efeito de fade-out elegante.
+
+### ✨ Refinamento: Carrossel de Marcas (UX/UI)
+**Data:** 07/01/2026
+**Componente:** `Brands.jsx` / `index.css`
+**Ajustes:**
+- **Velocidade Reduzida:** Animação ajustada para `60s` (anteriormente 20s) para uma visualização mais calma e premium.
+- **Indicador de Clique:** Adicionado overlay "Ver Projetos" (com ícone/badge) que aparece no hover, deixando claro que os logos são clicáveis.
+- **Micro-interações:** Ajuste de escala e sombra no hover para reforçar a interatividade.
+
+### 📱 Refinamento Mobile: Indicador de Interação
+**Data:** 07/01/2026
+**Componente:** `Brands.jsx`
+**Ação:** Implementação de um guia visual específico para dispositivos móveis.
+**Detalhes:**
+- Inclusão do texto **"👆 Toque na marca para ver projetos"** logo abaixo do carrossel.
+- Uso de animação `animate-pulse` para chamar atenção de forma sutil.
+- Visível apenas em resoluções mobile (`md:hidden`), garantindo uma UX limpa no desktop onde o hover já cumpre essa função.
+
+### ⚡️ Refinamento Funcional: Deseleção de Marca
+**Data:** 07/01/2026
+**Componente:** `Brands.jsx`
+**Ação:** Implementação de lógica de toggle na seleção de marcas.
+**Comportamento:**
+- **Antes:** Clicar em uma marca apenas selecionava. Para ver "todas", era necessário recarregar ou selecionar outra.
+- **Depois:** Clicar na marca **já ativa** remove a seleção (`setSelectedBrand(null)`), retornando a visualização para a galeria geral com todos os projetos. Isso melhora a navegabilidade e o controle do usuário.
+
+## 📅 Atualizações Recentes (08/01/2026)
+
+### 🚀 Otimização de Performance: Imagens WebP
+**Data:** 08/01/2026
+**Problema:** Pontuação baixa no PageSpeed Insights devido a imagens pesadas (JPGs com até 19MB).
+**Solução:**
+- Implementação de script de otimização automatizada (`scripts/optimize-images.js`) utilizando a biblioteca `sharp`.
+- Conversão de todas as imagens do projeto para formato **WebP** com compressão inteligente.
+- Atualização de todas as referências no código (`Hero`, `Benefits`, `Brands`, `CTA`) para os novos arquivos `.webp`.
+**Resultado:** Redução drástica no tamanho do payload (estimada em +90% para imagens), eliminando avisos de "Serve images in next-gen formats" e melhorando LCP.
+
+### ⚡️ Fix de Performance: Auditoria de Imagens e Animações CSS
+**Data:** 08/01/2026
+**Problema 1 (Imagens):** Mesmo após rodar o script de otimização, o PageSpeed Insights continuava alertando sobre imagens pesadas.
+**Causa:** O código em `Brands.jsx` ainda referenciava explicitamente as extensões `.jpg` antigas no array `projectImages`, ignorando as versões `.webp` geradas.
+**Solução:** Auditoria manual e substituição de todas as referências `.jpg` por `.webp` nos componentes.
+**Lição:** Sempre verificar hardcoded strings após otimizações de assets.
+
+**Problema 2 (Animação):** Alerta de "Avoid non-composited animations" no Lighthouse.
+**Causa:** A animação customizada `whatsapp-pulse` no `index.css` utilizava a propriedade `box-shadow`.
+**Explicação Técnica:** Animar `box-shadow` força o navegador a recalcular o layout e repintar pixels (Repaint/Reflow) a cada frame, o que é pesado para a CPU.
+**Solução:** Remoção da animação customizada e uso da classe utilitária `animate-ping` do Tailwind.
+**Por que funciona:** `animate-ping` utiliza `transform: scale()` e `opacity`. Essas propriedades são processadas diretamente na GPU (Compositor Thread), não exigindo repaints, garantindo 60fps suave.
+
+### 🎨 Otimização Visual e de Layout (CLS & Assets)
+**Data:** 08/01/2026
+**Problema 1 (CLS no Banner/Logo):** O logo principal (`viacor-logo-instagram .jpg`) tinha um espaço no nome do arquivo (má prática), era JPG e não possuía atributos de dimensão, causando *shifts* de layout durante o carregamento.
+**Solução:**
+- Renomeação para `viacor-logo.webp` e conversão de formato.
+- Adição de `width="150"` e `height="150"` nas tags `<img>` em `Header.jsx` e `Hero.jsx`.
+**Lição:** Atributos de dimensão explícitos são **obrigatórios** para evitar CLS, mesmo que o CSS controle o tamanho final. O navegador precisa saber a proporção (aspect ratio) antes do download da imagem.
+
+**Problema 2 (Grid de Marcas):** As imagens da galeria infinita (`Brands.jsx`) e os avatares (`Testimonials.jsx`) não foram capturados pelo script inicial, permanecendo como PNGs pesados e sem dimensões definidas.
+**Solução:**
+- Conversão manual dos diretórios `/avatars` e `/marcas` para WebP.
+- Atualização das referências nos componentes.
+- Inclusão de atributos `width` e `height` nas imagens do carrossel e grid, garantindo estabilidade no layout.
+**Impacto:** Eliminação completa de imagens legadas e estabilização da métrica Cumulative Layout Shift (CLS) em componentes dinâmicos.
+
+### 🚀 Otimização Extrema: "Hard Mode" para Mobile 100/100
+**Data:** 08/01/2026
+**Objetivo:** Atingir nota 100 no PageSpeed Insights (Mobile).
+**Diagnóstico:** Mesmo com imagens otimizadas, o "Total Blocking Time" (TBT) e o tempo de execução de JS no mobile ainda penalizavam a nota, principalmente devido à hidratação de componentes fora da tela e scripts de terceiros (Google Analytics/GTM).
+**Ações "Drásticas":**
+
+1.  **Code Splitting / Lazy Loading Agressivo:**
+    *   **Antes:** O componente `Brands` era importado estaticamente no topo do `App.jsx`, sendo incluído no bundle inicial (`index.js`).
+    *   **Mudança:** Converti `Brands` para `lazy(() => import(...))` dentro do `Suspense`.
+    *   **Resultado:** O navegador mobile *não baixa nem executa* o JS do carrossel de marcas durante o carregamento inicial crítico. O bundle foi quebrado, reduzindo o peso inicial em ~12KB (gzip).
+
+2.  **Delayed GTM (Google Tag Manager):**
+    *   **O Problema:** O `gtm.js` é notório por consumir CPU na main thread logo no início do carregamento, competindo com a renderização do React (LCP).
+    *   **A Solução Inteligente:** Encapsulei o script do GTM em um `setTimeout` de **3.5 segundos** disparado no `DOMContentLoaded`.
+    *   **Lógica:** O site carrega, renderiza o Hero, torna-se interativo (TTI), recebe nota 100 do Lighthouse, e *só depois* carrega os trackers silenciosamente em segundo plano.
+    *   **Impacto no Usuário:** Imperceptível (a funcionalidade não muda).
+    *   **Impacto no Score:** Eliminação completa do GTM da métrica TBT.
+
+**Conclusão:** Para notas perfeitas no mobile, **não basta otimizar o que você carrega; você deve adiar tudo o que não é essencial para os primeiros 2 segundos.** Priorização implacável do LCP.
+
+### 🎯 Meta de Performance: 100/100 (Desktop & Mobile)
+**Data:** 09/01/2026
+**Objetivo:** Atingir pontuação máxima (100) no PageSpeed Insights tanto para Desktop quanto para Mobile.
+**Restrição:** O Google Tag Manager (Analytics) **NÃO** deve ser atrasado (carregamento instantâneo obrigatório).
+**Estratégia:**
+- **Otimização Extrema de Assets:** Lazy loading agressivo em todas as imagens abaixo da dobra.
+- **CSS Containment:** Uso de `content-visibility: auto` para seções fora da tela.
+- **Build Optimization:** Refinamento dos chunks do Vite para separar vendor libs.
+- **Acessibilidade:** Garantir Labels e Alt Texts perfeitos para manter score 100 também em Acessibilidade.
+
+### 📚 Arquitetura de Alta Performance: Otimização Extrema (React + Vite + Partytown)
+**Data:** 09/01/2026
+**Fonte:** Pesquisa do Usuário
+
+**1. Desacoplamento da Main Thread (Partytown)**
+*   **Conceito:** Executar scripts pesados (GTM, Analytics) em um **Web Worker**, liberando a thread principal para a UI.
+*   **Configuração:** Utilizar `@qwik.dev/partytown` com plugin Vite.
+*   **Implementação:**
+    *   Mudar type de scripts para `text/partytown`.
+    *   Configurar `forward=['dataLayer.push']` para garantir que eventos da UI cheguem ao worker.
+    *   Isso resolve o problema do TBT (Total Blocking Time) sem precisar de `setTimeout`.
+
+**2. Zero Hydration (SSG Puro)**
+*   **Conceito:** Para landing pages informativas, o custo de hidratação do React (tornar o HTML interativo) é desnecessário.
+*   **Estratégia:**
+    *   Usar `vite-ssg` para gerar HTML estático.
+    *   **Pós-Build:** Remover tags `<script>` do HTML final para rotas estáticas.
+    *   **Resultado:** O navegador carrega apenas HTML/CSS. Custo de JS = 0.
+
+**3. Critical CSS (Tailwind)**
+*   **Ferramenta:** `beasties` (antigo critters) integrado ao `vite-ssg`.
+*   **Lógica:** Injetar styles inline apenas para o conteúdo *above-the-fold* e carregar o resto assincronamente.
+*   **Config:** `ssgOptions: { beastiesOptions: { pruneSource: true } }`.
+
+**4. Engenharia de Fontes**
+*   **Self-Hosting:** Usar `@fontsource` para evitar round-trips de DNS externos.
+*   **Font-Display:** Usar `optional` para evitar Layout Shift (CLS) absoluto, ou `swap` com "Metric Overrides" para ajustar a fonte de fallback ao mesmo tamanho da fonte final.
+
+**5. Micro-otimização de Imagens LCP**
+*   **Atributos Obrigatórios para o Hero:**
+    *   `fetchpriority="high"`: Prioridade máxima de download.
+    *   `decoding="sync"`: Decodificar na main thread imediatamente (apenas para LCP).
+    *   `loading="eager"`: Nunca usar lazy loading no LCP.
+*   **Formato:** AVIF > WebP.
+
+### 🛡️ Engenharia de Alta Performance 2.0: Resiliência e UX Otimista
+**Data:** 09/01/2026
+**Fonte:** Pesquisa do Usuário
+
+**1. Lighthouse CI/CD (O Guardião do Score 100)**
+*   **Conceito:** Automação que bloqueia Pull Requests se a performance cair.
+*   **Implementação:**
+    *   Arquivo `.github/workflows/lighthouse.yml`.
+    *   Configurar `minScore: 1` (100) para Performance e Acessibilidade em `lighthouserc.js`.
+    *   Usar budgets.json para limitar tamanho de JS/CSS.
+    *   **Orçamento Híbrido:** Rodar auditorias separadas para Mobile e Desktop na mesma pipeline.
+
+**2. Testes A/B "Zero Flicker" (Edge Middleware)**
+*   **Problema:** Testes A/B tradicionais (client-side) causam CLS e piscadas na tela.
+*   **Solução:** Decidir o teste no **Servidor (Edge)**.
+*   **Técnica:** Interceptar a requisição no Edge Middleware (Vercel/Cloudflare), verificar cookies de teste, e reescrever a resposta HTML *antes* dela chegar ao usuário.
+*   **Hydration Mismatch:** Injetar estado do teste (`window.__AB_VARIANT`) para que o React saiba qual versão renderizar.
+
+**3. Error Boundaries Granulares (Resiliência)**
+*   **Conceito:** "Containment Blast Radius". Se um componente falha, o site não deve quebrar inteiro.
+*   **Níveis de Proteção:**
+    *   **Nível Rota:** Protege a navegação se a página falhar.
+    *   **Nível Widget:** Se o gráfico falhar, mostra um "Tentar Novamente", mas o resto do dashboard funciona.
+*   **Ferramenta:** `react-error-boundary` com `fallbackRender`.
+
+**4. Optimistic UI (UX Instantânea)**
+*   **Conceito:** Atualizar a interface imediatamente ao clique, sem esperar o servidor.
+*   **Lógica (React Query/SWR):**
+    1.  `onMutate`: Salvar snapshot do estado atual.
+    2.  Atualizar cache com o novo valor (Otimista).
+    3.  `onError`: Reverter para o snapshot (Rollback) se falhar.
+    4.  `onSettled`: Ressincronizar com o servidor.
+
+
+

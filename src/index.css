@@ -23,6 +23,14 @@
   }
 }
 
+@layer utilities {
+  .content-visibility-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 500px;
+    /* Placeholder height */
+  }
+}
+
 /* Botão WhatsApp 3D Premium */
 .btn-3d-whatsapp {
   transform-style: preserve-3d;

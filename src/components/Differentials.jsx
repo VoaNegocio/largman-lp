@@ -126,6 +126,7 @@ export default function Differentials() {
                                                     <img
                                                         src={imagem.src}
                                                         alt={imagem.alt}
+                                                        loading="lazy"
                                                         className="w-full h-[400px] md:h-[500px] object-cover group-hover:opacity-90 transition-opacity"
                                                     />
                                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 pointer-events-none">

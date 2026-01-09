@@ -197,6 +197,7 @@ export default function AmbientsCarousel() {
                                                     <img
                                                         src={ambiente.imagem}
                                                         alt={ambiente.nome}
+                                                        loading="lazy"
                                                         className="w-full h-full object-cover object-center group-hover/item:scale-105 transition-transform duration-700"
                                                         onError={() => setImageErrors(prev => [...prev, index])}
                                                     />

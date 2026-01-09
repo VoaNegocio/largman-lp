@@ -12,11 +12,17 @@ function App() {
   return (
     <div className="font-sans text-neutral-900 antialiased selection:bg-[#C8A951] selection:text-white">
       <Hero />
-      <Differentials />
+      <div className="content-visibility-auto">
+        <Differentials />
+      </div>
       <Suspense fallback={null}>
-        <Testimonials />
-        <AmbientsCarousel />
-
+        <div className="content-visibility-auto">
+          <Testimonials />
+        </div>
+        <div className="content-visibility-auto">
+          <AmbientsCarousel />
+        </div>
+        <Footer />
         <WhatsAppButton />
       </Suspense>
     </div>

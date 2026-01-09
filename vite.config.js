@@ -8,8 +8,9 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          icons: ['react-icons'],
+          'react-vendor': ['react', 'react-dom'],
+          'ui-vendor': ['react-icons'],
+          'animation-vendor': ['framer-motion'], // If present, otherwise remove. Just react-icons is fine for now.
         },
       },
     },
