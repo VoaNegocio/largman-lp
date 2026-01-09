@@ -8,7 +8,7 @@ export default function Hero() {
             <div className="absolute inset-0 z-0">
                 {/* Imagem Mobile */}
                 <img
-                    src="/hero-largman-mobile.jpg"
+                    src="/hero-largman-mobile.webp"
                     alt="Ambiente premium com móveis planejados"
                     className="w-full h-full object-cover md:hidden"
                     width="800"
@@ -18,7 +18,7 @@ export default function Hero() {
                 />
                 {/* Imagem Desktop */}
                 <img
-                    src="/hero-largman-desktop.jpg"
+                    src="/hero-largman-desktop.webp"
                     alt="Ambiente premium com móveis planejados"
                     className="hidden md:block w-full h-full object-cover scale-105 transition-transform duration-700 ease-out"
                     width="1920"

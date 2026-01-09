@@ -10,7 +10,6 @@ export default defineConfig({
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
           'ui-vendor': ['react-icons'],
-          'animation-vendor': ['framer-motion'], // If present, otherwise remove. Just react-icons is fine for now.
         },
       },
     },

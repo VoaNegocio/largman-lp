@@ -8,7 +8,7 @@ export const CONTACT_INFO = {
     totalReviews: 150
 }
 
-export const LOGO_URL = '/logo-largman.jpg'
+export const LOGO_URL = '/logo-largman.webp'
 export const WHATSAPP_URL = `https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent(CONTACT_INFO.whatsappMessage)}`
 export const GOOGLE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT_INFO.endereco)}`
 export const GOOGLE_MAPS_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7509.839827059201!2d-47.89959263201268!3d-19.75855692625126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bacf94f5726321%3A0x388b157581986cf0!2sAv.%20Niza%20Marquez%20Guarit%C3%A1%2C%20528%20-%20Conj.%20Manoel%20Mendes%2C%20Uberaba%20-%20MG%2C%2038082-669!5e0!3m2!1spt-BR!2sbr!4v1764878550346!5m2!1spt-BR!2sbr'
@@ -38,17 +38,17 @@ export const AMBIENTES = [
 
 export const GALLERY_IMAGES = {
     projetos: [
-        { src: '/projetos/projeto1.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
-        { src: '/projetos/projeto2.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
-        { src: '/projetos/projeto3.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
-        { src: '/projetos/projeto4.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
-        { src: '/projetos/projeto5.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
-        { src: '/projetos/projeto6.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
+        { src: '/projetos/projeto1.webp', alt: 'Projeto Largman', nome: 'Projeto' },
+        { src: '/projetos/projeto2.webp', alt: 'Projeto Largman', nome: 'Projeto' },
+        { src: '/projetos/projeto3.webp', alt: 'Projeto Largman', nome: 'Projeto' },
+        { src: '/projetos/projeto4.webp', alt: 'Projeto Largman', nome: 'Projeto' },
+        { src: '/projetos/projeto5.webp', alt: 'Projeto Largman', nome: 'Projeto' },
+        { src: '/projetos/projeto6.webp', alt: 'Projeto Largman', nome: 'Projeto' },
 
-        { src: '/projetos/projeto8.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
-        { src: '/projetos/projeto9.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
-        { src: '/projetos/projeto10.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
-        { src: '/projetos/projeto11.jpg', alt: 'Projeto Largman', nome: 'Projeto' },
+        { src: '/projetos/projeto8.webp', alt: 'Projeto Largman', nome: 'Projeto' },
+        { src: '/projetos/projeto9.webp', alt: 'Projeto Largman', nome: 'Projeto' },
+        { src: '/projetos/projeto10.webp', alt: 'Projeto Largman', nome: 'Projeto' },
+        { src: '/projetos/projeto11.webp', alt: 'Projeto Largman', nome: 'Projeto' },
     ]
 }
 
