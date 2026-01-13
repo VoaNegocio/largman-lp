@@ -6500,3 +6500,76 @@ const ServiceCard = ({ service, index }) => {
 
 
 
+
+---
+
+# 🚀 Aprendizados: Otimização e Performance (WPO + SEO)
+
+## Sobre a Otimização
+Focamos em transformar uma landing page visualmente rica em um site extremamente rápido e compatível com as melhores práticas de SEO e Core Web Vitals.
+
+## 🖼️ Otimização de Imagens (Game Changer)
+
+### O Problema
+Imagens em formato JPG/PNG com resolução muito superior à necessária (ex: 4000px de largura) estavam causando LCP (Largest Contentful Paint) alto e consumo excessivo de dados.
+
+### A Solução: Pipeline de Otimização
+Criamos scripts automatizados usando a biblioteca `sharp` para processar as imagens.
+
+#### 1. Conversão para WebP
+Convertemos todas as imagens para o formato WebP, que oferece compressão superior sem perda visível de qualidade.
+- **Hero Desktop:** ~1.3 MB ➔ **~46 KB** (Redução de 96%)
+- **Hero Mobile:** ~1.3 MB ➔ **~35 KB** (Redução de 97%)
+- **Logo:** ~34 KB ➔ **~1.7 KB** (Redução de 95%)
+
+#### 2. Redimensionamento Inteligente (Resizing)
+- **Logos:** Redimensionados para 300px (tamanho de exibição real), evitando que o navegador baixe uma imagem gigante para exibir pequena.
+- **Projetos/Galeria:** Limitados a 1000px de largura, suficiente para telas de alta densidade sem desperdício.
+
+#### 3. Compatibilidade (Fallback)
+Mantivemos uma versão `.jpg` apenas para o **Logo**, garantindo que:
+- **Favicon** funcione em todos os navegadores/dispositivos.
+- **Open Graph (Social Sharing)** exiba a imagem corretamente no WhatsApp/Facebook/LinkedIn (que muitas vezes preferem JPG/PNG).
+
+```javascript
+// Exemplo de script de otimização com sharp
+import sharp from 'sharp';
+// ...
+await sharp('input.jpg')
+    .resize({ width: 1000, withoutEnlargement: true })
+    .webp({ quality: 80 })
+    .toFile('output.webp');
+```
+
+## ⚡ Performance e Core Web Vitals
+
+### 1. Preload de Recursos Críticos
+Utilizamos `<link rel="preload">` no `index.html` para informar ao navegador quais imagens baixar com prioridade alta antes mesmo de processar todo o CSS/JS.
+**Importante:** O `href` do preload deve bater exatamente com o recurso usado (agora `.webp`).
+
+```html
+<!-- Preload Hero Images -->
+<link rel="preload" as="image" href="/hero-largman-desktop.webp" media="(min-width: 768px)" fetchpriority="high" />
+<link rel="preload" as="image" href="/hero-largman-mobile.webp" media="(max-width: 767px)" fetchpriority="high" />
+```
+
+### 2. Limpeza de Bundle (Tree Shaking)
+- **Remoção de Código Morto:** Identificamos que a biblioteca `framer-motion` estava instalada mas não utilizada, adicionando peso desnecessário ao bundle.
+- **Ação:** Remoção da dependência e configuração de `manualChunks` no Vite para garantir que bibliotecas de terceiros (vendor) sejam cacheadas separadamente do código da aplicação.
+
+## 🔍 SEO e Acessibilidade
+
+### 1. Imagens Responsivas
+Garantir que usuários mobile recebam imagens mobile e desktop recebam desktop.
+- Uso de media queries no `<link rel="preload">`.
+- Classes utilitárias do Tailwind (`md:hidden` / `hidden md:block`) para alternar a exibição da imagem correta no HTML.
+
+### 2. Metadados e Compatibilidade
+- **Favicon:** Uso de `.jpg` para compatibilidade universal.
+- **Alt Text:** Garantia de que imagens de conteúdo tenham texto alternativo descritivo para leitores de tela e SEO.
+
+---
+
+### 3. Otimização de Imagens
+me lembrar de usar quando necessário
+https://tinyjpg.com/. 

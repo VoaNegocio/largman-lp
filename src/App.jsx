@@ -7,6 +7,7 @@ const Testimonials = lazy(() => import('./components/Testimonials'))
 const AmbientsCarousel = lazy(() => import('./components/AmbientsCarousel'))
 const Footer = lazy(() => import('./components/Footer'))
 const WhatsAppButton = lazy(() => import('./components/WhatsAppButton'))
+const Project3D = lazy(() => import('./components/Project3D'))
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </div>
         <div className="content-visibility-auto">
           <AmbientsCarousel />
+        </div>
+        <div className="content-visibility-auto">
+          <Project3D />
         </div>
         <Footer />
         <WhatsAppButton />
